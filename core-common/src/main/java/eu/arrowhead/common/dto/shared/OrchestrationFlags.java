@@ -68,9 +68,7 @@ public class OrchestrationFlags extends HashMap<String,Boolean> {
 		result.put(CommonConstants.ORCHESTRATON_FLAG_ONLY_PREFERRED, Flag.ONLY_PREFERRED);
 		result.put(CommonConstants.ORCHESTRATON_FLAG_PING_PROVIDERS, Flag.PING_PROVIDERS);
 		result.put(CommonConstants.ORCHESTRATON_FLAG_OVERRIDE_STORE, Flag.OVERRIDE_STORE);
-		result.put(CommonConstants.ORCHESTRATON_FLAG_TRIGGER_INTER_CLOUD, Flag.TRIGGER_INTER_CLOUD);
 		result.put(CommonConstants.ORCHESTRATON_FLAG_EXTERNAL_SERVICE_REQUEST, Flag.EXTERNAL_SERVICE_REQUEST);
-		result.put(CommonConstants.ORCHESTRATON_FLAG_ENABLE_INTER_CLOUD, Flag.ENABLE_INTER_CLOUD);
 		result.put(CommonConstants.ORCHESTRATON_FLAG_ENABLE_QOS, Flag.ENABLE_QOS);
 		
 		return result;
@@ -90,9 +88,7 @@ public class OrchestrationFlags extends HashMap<String,Boolean> {
 		ONLY_PREFERRED(CommonConstants.ORCHESTRATON_FLAG_ONLY_PREFERRED),
 		PING_PROVIDERS(CommonConstants.ORCHESTRATON_FLAG_PING_PROVIDERS),
 		OVERRIDE_STORE(CommonConstants.ORCHESTRATON_FLAG_OVERRIDE_STORE),
-		TRIGGER_INTER_CLOUD(CommonConstants.ORCHESTRATON_FLAG_TRIGGER_INTER_CLOUD),
 		EXTERNAL_SERVICE_REQUEST(CommonConstants.ORCHESTRATON_FLAG_EXTERNAL_SERVICE_REQUEST),
-		ENABLE_INTER_CLOUD(CommonConstants.ORCHESTRATON_FLAG_ENABLE_INTER_CLOUD),
 		ENABLE_QOS(CommonConstants.ORCHESTRATON_FLAG_ENABLE_QOS);
 		
 		//=================================================================================================
