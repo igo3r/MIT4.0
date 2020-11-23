@@ -1736,53 +1736,15 @@ Verify the connector's configuration, identify and stop any process that's liste
 2020-11-23 16:37:37.317  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
 2020-11-23 16:37:37.555  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Core system ORCHESTRATOR published 1 service(s).
 2020-11-23 16:37:38.614  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.o.OrchestratorMain                 : Started OrchestratorMain in 13.976 seconds (JVM running for 14.931)
-2020-11-23 19:04:55.871  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.o.OrchestratorMain                 : Starting OrchestratorMain on LAPTOP-G2IO37NG with PID 18436 (started by pbach in C:\Users\pbach\OneDrive - fh-burgenland.at\arbeit\MiT\CleanCode\UC2_C3ancC4_HTTPS\orchestrator)
-2020-11-23 19:04:55.881  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.o.OrchestratorMain                 : No active profile set, falling back to default profiles: default
-2020-11-23 19:04:59.978  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.f.ArrowheadFilter                  : OrchestratorAccessControlFilter is active
-2020-11-23 19:05:03.796  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
-2020-11-23 19:05:04.235  WARN LAPTOP-G2IO37NG --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-11-23 19:05:04.722  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.f.ArrowheadFilter                  : PayloadSizeFilter is active
-2020-11-23 19:05:06.308  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Core system name: ORCHESTRATOR
-2020-11-23 19:05:06.310  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Server mode: SECURED
-2020-11-23 19:05:06.465  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Server CN: orchestrator.testcloud2.aitia.arrowhead.eu
-2020-11-23 19:05:06.844  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
-2020-11-23 19:05:07.138  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Core system ORCHESTRATOR published 1 service(s).
-2020-11-23 19:05:08.452  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.o.OrchestratorMain                 : Started OrchestratorMain in 12.979 seconds (JVM running for 14.016)
-2020-11-23 19:06:52.407 ERROR LAPTOP-G2IO37NG --- [0.1-2243-exec-8] o.a.t.u.n.NioEndpoint                    : Error running socket processor
-java.lang.NullPointerException
-	at java.base/sun.security.ssl.HKDF.extract(HKDF.java:93)
-	at java.base/sun.security.ssl.HKDF.extract(HKDF.java:119)
-	at java.base/sun.security.ssl.ServerHello.setUpPskKD(ServerHello.java:1203)
-	at java.base/sun.security.ssl.ServerHello$T13ServerHelloProducer.produce(ServerHello.java:559)
-	at java.base/sun.security.ssl.SSLHandshake.produce(SSLHandshake.java:440)
-	at java.base/sun.security.ssl.ClientHello$T13ClientHelloConsumer.goServerHello(ClientHello.java:1243)
-	at java.base/sun.security.ssl.ClientHello$T13ClientHelloConsumer.consume(ClientHello.java:1179)
-	at java.base/sun.security.ssl.ClientHello$ClientHelloConsumer.onClientHello(ClientHello.java:851)
-	at java.base/sun.security.ssl.ClientHello$ClientHelloConsumer.consume(ClientHello.java:812)
-	at java.base/sun.security.ssl.SSLHandshake.consume(SSLHandshake.java:396)
-	at java.base/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:444)
-	at java.base/sun.security.ssl.SSLEngineImpl$DelegatedTask$DelegatedAction.run(SSLEngineImpl.java:1260)
-	at java.base/sun.security.ssl.SSLEngineImpl$DelegatedTask$DelegatedAction.run(SSLEngineImpl.java:1247)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:691)
-	at java.base/sun.security.ssl.SSLEngineImpl$DelegatedTask.run(SSLEngineImpl.java:1192)
-	at org.apache.tomcat.util.net.SecureNioChannel.tasks(SecureNioChannel.java:423)
-	at org.apache.tomcat.util.net.SecureNioChannel.handshakeUnwrap(SecureNioChannel.java:483)
-	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:238)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1724)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:830)
-2020-11-23 22:00:36.591  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.o.OrchestratorMain                 : Starting OrchestratorMain on LAPTOP-G2IO37NG with PID 24016 (started by pbach in C:\Users\pbach\OneDrive - fh-burgenland.at\arbeit\MiT\CleanCode\TOTAL_CLEAN_CS\orchestrator)
-2020-11-23 22:00:36.613  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.o.OrchestratorMain                 : No active profile set, falling back to default profiles: default
-2020-11-23 22:00:39.452  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.f.ArrowheadFilter                  : OrchestratorAccessControlFilter is active
-2020-11-23 22:00:42.318  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
-2020-11-23 22:00:42.614  WARN LAPTOP-G2IO37NG --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-11-23 22:00:42.942  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.f.ArrowheadFilter                  : PayloadSizeFilter is active
-2020-11-23 22:00:43.922  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Core system name: ORCHESTRATOR
-2020-11-23 22:00:43.923  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Server mode: SECURED
-2020-11-23 22:00:44.052  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Server CN: orchestrator.testcloud2.aitia.arrowhead.eu
-2020-11-23 22:00:44.345  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
-2020-11-23 22:00:44.525  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Core system ORCHESTRATOR published 1 service(s).
-2020-11-23 22:00:45.531  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.o.OrchestratorMain                 : Started OrchestratorMain in 9.302 seconds (JVM running for 10.129)
+2020-11-23 21:56:03.269  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.o.OrchestratorMain                 : Starting OrchestratorMain on LAPTOP-G2IO37NG with PID 23188 (started by pbach in C:\Users\pbach\OneDrive - fh-burgenland.at\arbeit\MiT\CleanCode\UC1_C1andC2_HTTPS\orchestrator)
+2020-11-23 21:56:03.279  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.o.OrchestratorMain                 : No active profile set, falling back to default profiles: default
+2020-11-23 21:56:06.034  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.f.ArrowheadFilter                  : OrchestratorAccessControlFilter is active
+2020-11-23 21:56:08.676  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2020-11-23 21:56:08.960  WARN LAPTOP-G2IO37NG --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-23 21:56:09.283  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.f.ArrowheadFilter                  : PayloadSizeFilter is active
+2020-11-23 21:56:10.252  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Core system name: ORCHESTRATOR
+2020-11-23 21:56:10.252  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Server mode: SECURED
+2020-11-23 21:56:10.363  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Server CN: orchestrator.testcloud2.aitia.arrowhead.eu
+2020-11-23 21:56:10.655  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2020-11-23 21:56:10.789  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Core system ORCHESTRATOR published 1 service(s).
+2020-11-23 21:56:11.720  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.o.OrchestratorMain                 : Started OrchestratorMain in 8.729 seconds (JVM running for 9.528)

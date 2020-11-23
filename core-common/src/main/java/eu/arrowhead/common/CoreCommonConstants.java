@@ -104,27 +104,11 @@ public class CoreCommonConstants {
 	public static final String $GATEKEEPER_IS_GATEWAY_MANDATORY_WD = "${" + GATEKEEPER_IS_GATEWAY_MANDATORY + ":" + CoreDefaults.DEFAULT_GATEKEEPER_IS_GATEWAY_MANDATORY + "}";
 	
 	public static final String INTRA_CLOUD_PROVIDER_MATCHMAKER = "intraCloudProviderMatchmaker";
-	public static final String INTER_CLOUD_PROVIDER_MATCHMAKER = "interCloudProviderMatchmaker";
 	public static final String ICN_PROVIDER_MATCHMAKER = "icnProviderMatchmaker";
 	public static final String GATEKEEPER_MATCHMAKER = "gatekeeperMatchmaker";
 	public static final String GATEWAY_MATCHMAKER = "gatewayMatchmaker";
-	public static final String CLOUD_MATCHMAKER = "cloudMatchmaker";
 	
 	public static final int TOP_PRIORITY = 1;
-	
-	public static final String NO_GATEKEEPER_RELAY_REQUEST_HANDLER_WORKERS = "no_gatekeeper_relay_request_handler_workers";
-	public static final String $NO_GATEKEEPER_RELAY_REQUEST_HANDLER_WORKERS_WD = "${" + NO_GATEKEEPER_RELAY_REQUEST_HANDLER_WORKERS + ":" + 
-																				 CoreDefaults.DEFAULT_NO_GATEKEEPER_RELAY_REQUEST_HANDLER_WORKERS + "}";
-	
-	public static final String GATEWAY_SOCKET_TIMEOUT = "gateway_socket_timeout";
-	public static final String $GATEWAY_SOCKET_TIMEOUT_WD = "${" + GATEWAY_SOCKET_TIMEOUT + ":" + CoreDefaults.DEFAULT_GATEWAY_SOCKET_TIMEOUT + "}";
-	public static final String GATEWAY_MIN_PORT = "min_port";
-	public static final String $GATEWAY_MIN_PORT_WD = "${" + GATEWAY_MIN_PORT + ":" + CoreDefaults.DEFAULT_GATEWAY_MIN_PORT + "}";
-	public static final String GATEWAY_MAX_PORT = "max_port";
-	public static final String $GATEWAY_MAX_PORT_WD = "${" + GATEWAY_MAX_PORT + ":" + CoreDefaults.DEFAULT_GATEWAY_MAX_PORT + "}";
-	
-	public static final String GATEWAY_ACTIVE_SESSION_MAP = "activeSessions";
-	public static final String GATEWAY_AVAILABLE_PORTS_QUEUE = "availableQueue";
 	
 	public static final String EVENT_HANDLER_TTL_SCHEDULED = "event_handler_ttl_scheduled";
 	public static final String $EVENT_HANDLER_TTL_SCHEDULED_WD = "${" + EVENT_HANDLER_TTL_SCHEDULED + ":" + CoreDefaults.DEFAULT_EVENT_HANDLER_TTL_SCHEDULED + "}";

@@ -75,7 +75,6 @@ public class CommonConstants {
 	public static final String OP_AUTH_TOKEN_URI = "/token";
 	public static final String OP_AUTH_KEY_URI = "/publickey";
 	public static final String OP_AUTH_INTRA_CHECK_URI = "/intracloud/check";
-	public static final String OP_AUTH_INTER_CHECK_URI = "/intercloud/check";
 	public static final String OP_AUTH_SUBSCRIPTION_CHECK_URI = "/subscription/check";
 	
 	public static final String ORCHESTRATOR_URI = "/orchestrator";
@@ -85,9 +84,7 @@ public class CommonConstants {
 	public static final String ORCHESTRATON_FLAG_ONLY_PREFERRED = "onlyPreferred";
 	public static final String ORCHESTRATON_FLAG_PING_PROVIDERS = "pingProviders";
 	public static final String ORCHESTRATON_FLAG_OVERRIDE_STORE = "overrideStore";
-	public static final String ORCHESTRATON_FLAG_TRIGGER_INTER_CLOUD = "triggerInterCloud";
 	public static final String ORCHESTRATON_FLAG_EXTERNAL_SERVICE_REQUEST = "externalServiceRequest";
-	public static final String ORCHESTRATON_FLAG_ENABLE_INTER_CLOUD = "enableInterCloud";
 	public static final String ORCHESTRATON_FLAG_ENABLE_QOS = "enableQoS";
 	
 	public static final String SWAGGER_COMMON_PACKAGE = "eu.arrowhead.common.swagger";
@@ -152,7 +149,6 @@ public class CommonConstants {
 	public static final String SORT_FIELD_PRIORITY = "priority";
 		
 	public static final String INTRA_CLOUD_PROVIDER_MATCHMAKER = "intraCloudProviderMatchmaker";
-	public static final String INTER_CLOUD_PROVIDER_MATCHMAKER = "interCloudProviderMatchmaker";
 	public static final String ICN_PROVIDER_MATCHMAKER = "icnProviderMatchmaker";
 	public static final String GATEKEEPER_MATCHMAKER = "gatekeeperMatchmaker";
 	public static final String GATEWAY_MATCHMAKER = "gatewayMatchmaker";
