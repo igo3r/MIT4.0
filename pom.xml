@@ -27,6 +27,9 @@
 	    <module>serviceregistry</module>
 	    <module>authorization</module>
 	    <module>orchestrator</module>
+	    <module>arrowhead-producer</module>
+	    <module>arrowhead-consumer</module>
+	    <module>arrowhead-client</module>
   </modules>
 
 	<properties>

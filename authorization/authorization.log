@@ -3039,15 +3039,23 @@ Verify the connector's configuration, identify and stop any process that's liste
 2020-11-23 19:03:41.499  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
 2020-11-23 19:03:42.452  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Core system AUTHORIZATION published 4 service(s).
 2020-11-23 19:03:43.735  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.a.AuthorizationMain                : Started AuthorizationMain in 15.106 seconds (JVM running for 16.308)
-2020-11-23 22:00:20.776  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.a.AuthorizationMain                : Starting AuthorizationMain on LAPTOP-G2IO37NG with PID 17900 (started by pbach in C:\Users\pbach\OneDrive - fh-burgenland.at\arbeit\MiT\CleanCode\TOTAL_CLEAN_CS\authorization)
-2020-11-23 22:00:20.784  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.a.AuthorizationMain                : No active profile set, falling back to default profiles: default
-2020-11-23 22:00:23.768  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.f.ArrowheadFilter                  : AuthAccessControlFilter is active
-2020-11-23 22:00:26.523  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
-2020-11-23 22:00:26.826  WARN LAPTOP-G2IO37NG --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-11-23 22:00:27.183  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.f.ArrowheadFilter                  : PayloadSizeFilter is active
-2020-11-23 22:00:28.316  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Core system name: AUTHORIZATION
-2020-11-23 22:00:28.316  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Server mode: SECURED
-2020-11-23 22:00:28.383  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Server CN: authorization.testcloud2.aitia.arrowhead.eu
-2020-11-23 22:00:28.967  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
-2020-11-23 22:00:29.722  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Core system AUTHORIZATION published 5 service(s).
-2020-11-23 22:00:30.780  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.a.AuthorizationMain                : Started AuthorizationMain in 10.326 seconds (JVM running for 11.278)
+2020-11-23 21:33:47.083  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.a.AuthorizationMain                : Starting AuthorizationMain on LAPTOP-G2IO37NG with PID 21972 (started by pbach in C:\Users\pbach\OneDrive - fh-burgenland.at\arbeit\MiT\CleanCode\UC4_C3andC4_HTTP\authorization)
+2020-11-23 21:33:47.099  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.a.AuthorizationMain                : No active profile set, falling back to default profiles: default
+2020-11-23 21:33:52.571  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2020-11-23 21:33:52.867  WARN LAPTOP-G2IO37NG --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-23 21:33:53.232  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.f.ArrowheadFilter                  : PayloadSizeFilter is active
+2020-11-23 21:33:54.295  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Core system name: AUTHORIZATION
+2020-11-23 21:33:54.295  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Server mode: NOT SECURED
+2020-11-23 21:33:54.526  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2020-11-23 21:33:55.340  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Core system AUTHORIZATION published 4 service(s).
+2020-11-23 21:33:56.033  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.a.AuthorizationMain                : Started AuthorizationMain in 9.239 seconds (JVM running for 10.103)
+2020-11-23 21:41:12.106  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.a.AuthorizationMain                : Starting AuthorizationMain on LAPTOP-G2IO37NG with PID 19836 (started by pbach in C:\Users\pbach\OneDrive - fh-burgenland.at\arbeit\MiT\CleanCode\UC4_C3andC4_HTTP\authorization)
+2020-11-23 21:41:12.114  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.a.AuthorizationMain                : No active profile set, falling back to default profiles: default
+2020-11-23 21:41:17.581  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2020-11-23 21:41:17.882  WARN LAPTOP-G2IO37NG --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-23 21:41:18.264  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.f.ArrowheadFilter                  : PayloadSizeFilter is active
+2020-11-23 21:41:19.375  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Core system name: AUTHORIZATION
+2020-11-23 21:41:19.375  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Server mode: NOT SECURED
+2020-11-23 21:41:19.591  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2020-11-23 21:41:20.362  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Core system AUTHORIZATION published 4 service(s).
+2020-11-23 21:41:21.075  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.a.AuthorizationMain                : Started AuthorizationMain in 9.288 seconds (JVM running for 10.178)
