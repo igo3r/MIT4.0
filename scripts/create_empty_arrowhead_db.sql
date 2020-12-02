@@ -159,6 +159,42 @@ CREATE TABLE `logs` (
   PRIMARY KEY (`log_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- Table for PiLogger 
+
+DROP TABLE IF EXISTS `pilogger`; 
+CREATE TABLE `pilogger`(
+	`pilogger_id` bigint(20) NOT NULL AUTO_INCREMENT,
+	`#____Timestamp_____` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	`Mom[¬∞C]` text, 
+	`Avg[¬∞C]` text, 
+	`Min[¬∞C]` text, 
+	`Max[¬∞C]` text, 
+	`Mom[km/h]` text, 
+	`Avg[km/h]` text, 
+	`Min[km/h]` text, 
+	`Max[km/h]` text, 
+	`Mom[V]` text, 
+	`Avg[V]` text, 
+	`Min[V]` text, 
+	`Max[V]` text, 
+	`Mom[A]` text, 
+	`Avg[A]` text, 
+	`Min[A]` text, 
+	`Max[A]` text, 
+	`Mom[W]` text, 
+	`Avg[W]` text, 
+	`Min[W]` text, 
+	`Max[W]` text, 
+	`Ohm[Œ©]` text, 
+	`Bila[Wh]` text, 
+	`Ertr[Wh]` text, 
+	`Verb[Wh]` text, 
+	`BilTg[Wh]` text, 
+	`ErtTg[Wh]` text, 
+	`VerTg[Wh]` text, 
+	PRIMARY KEY (`pilogger_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 -- Set up privileges
 
 -- Service Registry
