@@ -4,14 +4,14 @@
         <Property name="LOG_PATTERN">
             %d{yyyy-MM-dd HH:mm:ss.SSS} %5p ${hostName} --- [%15.15t] %-40.40c{1.} : %m%n%ex
         </Property>
-		<Property name="JDBC_LEVEL">DEBUG</Property>
-		<Property name="CONSOLE_FILE_LEVEL">DEBUG</Property>
+		<Property name="JDBC_LEVEL">INFO</Property>
+		<Property name="CONSOLE_FILE_LEVEL">INFO</Property>
     </Properties>
     <Appenders>
         <Console name="ConsoleAppender" target="SYSTEM_OUT" follow="true">
             <PatternLayout pattern="${LOG_PATTERN}"/>
         </Console>
-		<RollingFile name="FileAppender" fileName="orchestrator.log" filePattern="orchestrator-%d{yyyy-MM-dd}-%i.log">
+		<RollingFile name="FileAppender" fileName="producer.log" filePattern="producer-%d{yyyy-MM-dd}-%i.log">
 	    	<PatternLayout>
 	        	<Pattern>${LOG_PATTERN}</Pattern>
 	    	</PatternLayout>

@@ -1,24 +1,22 @@
 package eu.arrowhead.mit.producer;
 
-import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 import eu.arrowhead.common.ApplicationInitListener;
-import eu.arrowhead.common.CommonConstants;
-import eu.arrowhead.common.CoreDefaults;
 import eu.arrowhead.common.database.service.CommonDBService;
-import eu.arrowhead.common.exception.DataNotFoundException;
 
 @Component
-public class ProducerApplicationInitListener extends ApplicationInitListener{
+public class ProducerApplicationInitListener extends ApplicationInitListener {
 
-	//=================================================================================================
+	// =================================================================================================
 	// members
-	
+
 	@Autowired
-	private CommonDBService commonDBService; 
+	private CommonDBService commonDBService;
+
+	// uncomment this line if there is a problem with "unregister service" -
+	// ATTENTION THIS IS JUST A WORKAROUND
+	// this line means, the system will be not registered
+//	public void onApplicationEvent(final ContextRefreshedEvent event) throws KeyStoreException, NoSuchAlgorithmException, CertificateException, IOException, InterruptedException {}
 
 }

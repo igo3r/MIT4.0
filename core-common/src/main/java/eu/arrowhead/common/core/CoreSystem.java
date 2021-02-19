@@ -14,8 +14,8 @@ public enum CoreSystem {
 	//=================================================================================================
 	// elements
 	
-	CONSUMER(MITConstants.MIT_DEFAULT_CONSUMER_PORT, List.of(CoreSystemService.CONSUMER_TEMPERATURE_ARRAY_SINGLE_SERVICE)),
-	PRODUCER(MITConstants.MIT_DEFAULT_PRODUCER_PORT, List.of(CoreSystemService.PRODUCER_GET_STATUS_SERVICE)),
+	CONSUMER(MITConstants.MIT_DEFAULT_CONSUMER_PORT, List.of(CoreSystemService.CONSUMER_TURN_ON_SERVICE, CoreSystemService.CONSUMER_TURN_OFF_SERVICE)),
+	PRODUCER(MITConstants.MIT_DEFAULT_PRODUCER_PORT, List.of(CoreSystemService.PRODUCER_GET_TEMPERATURE_SERVICE)),
 	CLIENT(MITConstants.MIT_DEFAULT_CLIENT_PORT, null),
 	SERVICE_REGISTRY(Defaults.DEFAULT_SERVICE_REGISTRY_PORT, null),
 	AUTHORIZATION(Defaults.DEFAULT_AUTHORIZATION_PORT, List.of(CoreSystemService.AUTH_CONTROL_INTRA_SERVICE,

@@ -1,0 +1,698 @@
+2021-02-17 21:13:30.351  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : Starting ProducerMain on LAPTOP-VQ0I1IDC with PID 19164 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\FINAL_PROTOTYPE\Version2\MIT4.0-final_prototype\arrowhead-producer)
+2021-02-17 21:13:30.360  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : No active profile set, falling back to default profiles: default
+2021-02-17 21:13:36.707  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-17 21:13:37.126  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-17 21:13:38.677  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: PRODUCER
+2021-02-17 21:13:38.677  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: SECURED
+2021-02-17 21:13:38.812  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server CN: producer1.testcloud2.aitia.arrowhead.eu
+2021-02-17 21:13:39.420 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/echo
+2021-02-17 21:13:39.421  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is unavailable at the moment, retrying in 15 seconds...
+2021-02-17 21:13:54.697 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/echo
+2021-02-17 21:13:54.698  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is unavailable at the moment, retrying in 15 seconds...
+2021-02-17 21:14:09.974 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/echo
+2021-02-17 21:14:09.974  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is unavailable at the moment, retrying in 15 seconds...
+2021-02-17 21:14:25.222 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/echo
+2021-02-17 21:14:25.234 ERROR LAPTOP-VQ0I1IDC --- [           main] o.s.b.SpringApplication                  : Application run failed
+eu.arrowhead.common.exception.UnavailableServerException: Could not get any response from: https://10.20.30.5:1235/serviceregistry/echo
+	at eu.arrowhead.common.http.HttpService.sendRequest(HttpService.java:155)
+	at eu.arrowhead.common.http.HttpService.sendRequest(HttpService.java:172)
+	at eu.arrowhead.common.ApplicationInitListener.checkServiceRegistryConnection(ApplicationInitListener.java:245)
+	at eu.arrowhead.common.ApplicationInitListener.registerCoreSystemServicesToServiceRegistry(ApplicationInitListener.java:211)
+	at eu.arrowhead.common.ApplicationInitListener.onApplicationEvent(ApplicationInitListener.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:261)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:179)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:142)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at eu.arrowhead.mit.producer.ProducerMain.main(ProducerMain.java:27)
+Caused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "https://10.20.30.5:1235/serviceregistry/echo": Received fatal alert: certificate_unknown; nested exception is javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:744)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:710)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:598)
+	at eu.arrowhead.common.http.HttpService.sendRequest(HttpService.java:144)
+	... 26 more
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:131)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:356)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:293)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:202)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:171)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1491)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1456)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1038)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:735)
+	... 29 more
+2021-02-17 21:14:25.451 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/echo
+2021-02-17 21:14:25.452  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is unavailable at the moment, retrying in 1 seconds...
+2021-02-17 21:14:26.717 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/unregister?system_name=producer&address=10.20.30.2&port=1232&service_definition=on_ac
+2021-02-17 21:14:26.717  WARN LAPTOP-VQ0I1IDC --- [           main] .s.c.a.CommonAnnotationBeanPostProcessor : Destroy method on bean with name 'producerApplicationInitListener' threw an exception: eu.arrowhead.common.exception.UnavailableServerException: Could not get any response from: https://10.20.30.5:1235/serviceregistry/unregister?system_name=producer&address=10.20.30.2&port=1232&service_definition=on_ac
+2021-02-17 21:18:46.181  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : Starting ProducerMain on LAPTOP-VQ0I1IDC with PID 19552 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\FINAL_PROTOTYPE\Version2\MIT4.0-final_prototype\arrowhead-producer)
+2021-02-17 21:18:46.192  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : No active profile set, falling back to default profiles: default
+2021-02-17 21:18:51.563  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-17 21:18:51.925  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-17 21:18:53.327  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: PRODUCER
+2021-02-17 21:18:53.328  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: SECURED
+2021-02-17 21:18:53.431  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server CN: producer1.testcloud2.aitia.arrowhead.eu
+2021-02-17 21:18:53.943 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/echo
+2021-02-17 21:18:53.944  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is unavailable at the moment, retrying in 15 seconds...
+2021-02-17 21:19:09.197 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/echo
+2021-02-17 21:19:09.197  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is unavailable at the moment, retrying in 15 seconds...
+2021-02-17 21:19:24.432 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/echo
+2021-02-17 21:19:24.432  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is unavailable at the moment, retrying in 15 seconds...
+2021-02-17 21:19:39.676 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/echo
+2021-02-17 21:19:39.688 ERROR LAPTOP-VQ0I1IDC --- [           main] o.s.b.SpringApplication                  : Application run failed
+eu.arrowhead.common.exception.UnavailableServerException: Could not get any response from: https://10.20.30.5:1235/serviceregistry/echo
+	at eu.arrowhead.common.http.HttpService.sendRequest(HttpService.java:155)
+	at eu.arrowhead.common.http.HttpService.sendRequest(HttpService.java:172)
+	at eu.arrowhead.common.ApplicationInitListener.checkServiceRegistryConnection(ApplicationInitListener.java:245)
+	at eu.arrowhead.common.ApplicationInitListener.registerCoreSystemServicesToServiceRegistry(ApplicationInitListener.java:211)
+	at eu.arrowhead.common.ApplicationInitListener.onApplicationEvent(ApplicationInitListener.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:261)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:179)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:142)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at eu.arrowhead.mit.producer.ProducerMain.main(ProducerMain.java:27)
+Caused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "https://10.20.30.5:1235/serviceregistry/echo": Received fatal alert: certificate_unknown; nested exception is javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:744)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:710)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:598)
+	at eu.arrowhead.common.http.HttpService.sendRequest(HttpService.java:144)
+	... 26 more
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:131)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:356)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:293)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:202)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:171)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1491)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1456)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1038)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:735)
+	... 29 more
+2021-02-17 21:19:39.901 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/echo
+2021-02-17 21:19:39.901  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is unavailable at the moment, retrying in 1 seconds...
+2021-02-17 21:19:41.191 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/unregister?system_name=producer&address=10.20.30.2&port=1232&service_definition=on_ac
+2021-02-17 21:19:41.191  WARN LAPTOP-VQ0I1IDC --- [           main] .s.c.a.CommonAnnotationBeanPostProcessor : Destroy method on bean with name 'producerApplicationInitListener' threw an exception: eu.arrowhead.common.exception.UnavailableServerException: Could not get any response from: https://10.20.30.5:1235/serviceregistry/unregister?system_name=producer&address=10.20.30.2&port=1232&service_definition=on_ac
+2021-02-17 21:26:57.146  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : Starting ProducerMain on LAPTOP-VQ0I1IDC with PID 9524 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\FINAL_PROTOTYPE\Version2\MIT4.0-final_prototype\arrowhead-producer)
+2021-02-17 21:26:57.156  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : No active profile set, falling back to default profiles: default
+2021-02-17 21:27:02.647  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-17 21:27:03.018  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-17 21:27:04.495  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: PRODUCER
+2021-02-17 21:27:04.496  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: SECURED
+2021-02-17 21:27:04.580  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server CN: producer.testcloud2.aitia.arrowhead.eu
+2021-02-17 21:27:05.080 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/echo
+2021-02-17 21:27:05.081  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is unavailable at the moment, retrying in 15 seconds...
+2021-02-17 21:27:20.332 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/echo
+2021-02-17 21:27:20.332  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is unavailable at the moment, retrying in 15 seconds...
+2021-02-17 21:27:35.575 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/echo
+2021-02-17 21:27:35.576  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is unavailable at the moment, retrying in 15 seconds...
+2021-02-17 21:27:44.771  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : Starting ProducerMain on LAPTOP-VQ0I1IDC with PID 19492 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\FINAL_PROTOTYPE\Version2\MIT4.0-final_prototype\arrowhead-producer)
+2021-02-17 21:27:44.780  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : No active profile set, falling back to default profiles: default
+2021-02-17 21:27:50.460  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-17 21:27:50.833  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-17 21:27:52.331  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: PRODUCER
+2021-02-17 21:27:52.331  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: SECURED
+2021-02-17 21:27:52.434  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server CN: c2_producer.testcloud2.aitia.arrowhead.eu
+2021-02-17 21:27:52.990  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-17 21:27:53.116 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : Request returned with AUTH: Only public core system services are allowed to query directly. Requested service (on_ac) is not!
+2021-02-17 21:27:53.132 ERROR LAPTOP-VQ0I1IDC --- [           main] o.s.b.SpringApplication                  : Application run failed
+eu.arrowhead.common.exception.AuthException: Only public core system services are allowed to query directly. Requested service (on_ac) is not!
+	at eu.arrowhead.common.Utilities.createExceptionFromErrorMessageDTO(Utilities.java:456)
+	at eu.arrowhead.common.http.ArrowheadHttpClientResponseErrorHandler.handleError(ArrowheadHttpClientResponseErrorHandler.java:53)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:778)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:736)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:710)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:598)
+	at eu.arrowhead.common.http.HttpService.sendRequest(HttpService.java:144)
+	at eu.arrowhead.common.http.HttpService.sendRequest(HttpService.java:162)
+	at eu.arrowhead.common.ApplicationInitListener.registerCoreSystemServicesToServiceRegistry(ApplicationInitListener.java:220)
+	at eu.arrowhead.common.ApplicationInitListener.onApplicationEvent(ApplicationInitListener.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:261)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:179)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:142)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at eu.arrowhead.mit.producer.ProducerMain.main(ProducerMain.java:27)
+2021-02-17 21:27:53.167  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-17 21:27:53.198 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : Request returned with AUTH: Provider system name(producer) and certificate common name (c2_producer.testcloud2.aitia.arrowhead.eu) do not match!
+2021-02-17 21:27:53.198  WARN LAPTOP-VQ0I1IDC --- [           main] .s.c.a.CommonAnnotationBeanPostProcessor : Destroy method on bean with name 'producerApplicationInitListener' threw an exception: eu.arrowhead.common.exception.AuthException: Provider system name(producer) and certificate common name (c2_producer.testcloud2.aitia.arrowhead.eu) do not match!
+2021-02-17 21:28:32.911  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : Starting ProducerMain on LAPTOP-VQ0I1IDC with PID 19428 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\FINAL_PROTOTYPE\Version2\MIT4.0-final_prototype\arrowhead-producer)
+2021-02-17 21:28:32.920  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : No active profile set, falling back to default profiles: default
+2021-02-17 21:28:37.522  WARN LAPTOP-VQ0I1IDC --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'producerApplicationInitListener': Unsatisfied dependency expressed through field 'coreSystemRegistrationProperties'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'coreSystemRegistrationProperties': Invocation of init method failed; nested exception is java.util.ServiceConfigurationError: Core system name C2_PRODUCER is not recognized.
+2021-02-17 21:28:37.546 ERROR LAPTOP-VQ0I1IDC --- [           main] o.s.b.SpringApplication                  : Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'producerApplicationInitListener': Unsatisfied dependency expressed through field 'coreSystemRegistrationProperties'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'coreSystemRegistrationProperties': Invocation of init method failed; nested exception is java.util.ServiceConfigurationError: Core system name C2_PRODUCER is not recognized.
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:843)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at eu.arrowhead.mit.producer.ProducerMain.main(ProducerMain.java:27)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'coreSystemRegistrationProperties': Invocation of init method failed; nested exception is java.util.ServiceConfigurationError: Core system name C2_PRODUCER is not recognized.
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:139)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1248)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1168)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 19 more
+Caused by: java.util.ServiceConfigurationError: Core system name C2_PRODUCER is not recognized.
+	at eu.arrowhead.common.CoreSystemRegistrationProperties.initCoreSystem(CoreSystemRegistrationProperties.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:363)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:307)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:136)
+	... 31 more
+Caused by: java.lang.IllegalArgumentException: No enum constant eu.arrowhead.common.core.CoreSystem.C2_PRODUCER
+	at java.base/java.lang.Enum.valueOf(Enum.java:273)
+	at eu.arrowhead.common.core.CoreSystem.valueOf(CoreSystem.java:1)
+	at eu.arrowhead.common.CoreSystemRegistrationProperties.initCoreSystem(CoreSystemRegistrationProperties.java:52)
+	... 38 more
+2021-02-17 21:29:22.657  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : Starting ProducerMain on LAPTOP-VQ0I1IDC with PID 18004 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\FINAL_PROTOTYPE\Version2\MIT4.0-final_prototype\arrowhead-producer)
+2021-02-17 21:29:22.666  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : No active profile set, falling back to default profiles: default
+2021-02-17 21:29:28.327  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-17 21:29:28.707  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-17 21:29:30.171  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: C2_PRODUCER
+2021-02-17 21:29:30.172  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: SECURED
+2021-02-17 21:29:30.294  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server CN: c2_producer.testcloud2.aitia.arrowhead.eu
+2021-02-17 21:29:30.889  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-17 21:29:31.019 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : Request returned with AUTH: Only public core system services are allowed to query directly. Requested service (on_ac) is not!
+2021-02-17 21:29:31.034 ERROR LAPTOP-VQ0I1IDC --- [           main] o.s.b.SpringApplication                  : Application run failed
+eu.arrowhead.common.exception.AuthException: Only public core system services are allowed to query directly. Requested service (on_ac) is not!
+	at eu.arrowhead.common.Utilities.createExceptionFromErrorMessageDTO(Utilities.java:456)
+	at eu.arrowhead.common.http.ArrowheadHttpClientResponseErrorHandler.handleError(ArrowheadHttpClientResponseErrorHandler.java:53)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:778)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:736)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:710)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:598)
+	at eu.arrowhead.common.http.HttpService.sendRequest(HttpService.java:144)
+	at eu.arrowhead.common.http.HttpService.sendRequest(HttpService.java:162)
+	at eu.arrowhead.common.ApplicationInitListener.registerCoreSystemServicesToServiceRegistry(ApplicationInitListener.java:220)
+	at eu.arrowhead.common.ApplicationInitListener.onApplicationEvent(ApplicationInitListener.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:261)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:179)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:142)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at eu.arrowhead.mit.producer.ProducerMain.main(ProducerMain.java:27)
+2021-02-17 21:29:31.073  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-17 21:29:31.196 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : Request returned with INVALID_PARAMETER: No service exists with definition on_ac
+2021-02-17 21:29:31.197  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system C2_PRODUCER revoked 0 service(s).
+2021-02-17 21:30:33.700  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : Starting ProducerMain on LAPTOP-VQ0I1IDC with PID 16248 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\FINAL_PROTOTYPE\Version2\MIT4.0-final_prototype\arrowhead-producer)
+2021-02-17 21:30:33.710  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : No active profile set, falling back to default profiles: default
+2021-02-17 21:30:39.509  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-17 21:30:39.912  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-17 21:30:41.639  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: PRODUCER
+2021-02-17 21:30:41.639  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: SECURED
+2021-02-17 21:30:41.758  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server CN: producer.testcloud2.aitia.arrowhead.eu
+2021-02-17 21:30:42.374 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/echo
+2021-02-17 21:30:42.375  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is unavailable at the moment, retrying in 15 seconds...
+2021-02-17 21:35:01.509  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : Starting ProducerMain on LAPTOP-VQ0I1IDC with PID 8700 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\FINAL_PROTOTYPE\Version2\MIT4.0-final_prototype\arrowhead-producer)
+2021-02-17 21:35:01.518  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : No active profile set, falling back to default profiles: default
+2021-02-17 21:35:06.679  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-17 21:35:07.016  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-17 21:35:08.355  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: PRODUCER
+2021-02-17 21:35:08.355  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: SECURED
+2021-02-17 21:35:08.459  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server CN: producer.testcloud2.aitia.arrowhead.eu
+2021-02-17 21:35:08.967 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/echo
+2021-02-17 21:35:08.968  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is unavailable at the moment, retrying in 15 seconds...
+2021-02-17 21:35:24.218 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/echo
+2021-02-17 21:35:24.219  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is unavailable at the moment, retrying in 15 seconds...
+2021-02-17 21:35:39.458 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/echo
+2021-02-17 21:35:39.458  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is unavailable at the moment, retrying in 15 seconds...
+2021-02-17 21:35:54.689 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/echo
+2021-02-17 21:35:54.702 ERROR LAPTOP-VQ0I1IDC --- [           main] o.s.b.SpringApplication                  : Application run failed
+eu.arrowhead.common.exception.UnavailableServerException: Could not get any response from: https://10.20.30.5:1235/serviceregistry/echo
+	at eu.arrowhead.common.http.HttpService.sendRequest(HttpService.java:155)
+	at eu.arrowhead.common.http.HttpService.sendRequest(HttpService.java:172)
+	at eu.arrowhead.common.ApplicationInitListener.checkServiceRegistryConnection(ApplicationInitListener.java:245)
+	at eu.arrowhead.common.ApplicationInitListener.registerCoreSystemServicesToServiceRegistry(ApplicationInitListener.java:211)
+	at eu.arrowhead.common.ApplicationInitListener.onApplicationEvent(ApplicationInitListener.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:261)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:179)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:142)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at eu.arrowhead.mit.producer.ProducerMain.main(ProducerMain.java:27)
+Caused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "https://10.20.30.5:1235/serviceregistry/echo": Received fatal alert: certificate_unknown; nested exception is javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:744)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:710)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:598)
+	at eu.arrowhead.common.http.HttpService.sendRequest(HttpService.java:144)
+	... 26 more
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:131)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:356)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:293)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:202)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:171)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1491)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1456)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1038)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:735)
+	... 29 more
+2021-02-17 21:35:54.890 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/echo
+2021-02-17 21:35:54.890  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is unavailable at the moment, retrying in 1 seconds...
+2021-02-17 21:35:56.133 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/unregister?system_name=producer&address=10.20.30.2&port=1232&service_definition=on_ac
+2021-02-17 21:35:56.133  WARN LAPTOP-VQ0I1IDC --- [           main] .s.c.a.CommonAnnotationBeanPostProcessor : Destroy method on bean with name 'producerApplicationInitListener' threw an exception: eu.arrowhead.common.exception.UnavailableServerException: Could not get any response from: https://10.20.30.5:1235/serviceregistry/unregister?system_name=producer&address=10.20.30.2&port=1232&service_definition=on_ac
+2021-02-17 21:48:55.052  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : Starting ProducerMain on LAPTOP-VQ0I1IDC with PID 14428 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\FINAL_PROTOTYPE\Version2\MIT4.0-final_prototype\arrowhead-producer)
+2021-02-17 21:48:55.062  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : No active profile set, falling back to default profiles: default
+2021-02-17 21:49:00.708  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-17 21:49:01.067  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-17 21:49:02.565  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: PRODUCER
+2021-02-17 21:49:02.566  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: SECURED
+2021-02-17 21:49:02.712  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server CN: producer.testcloud2.aitia.arrowhead.eu
+2021-02-17 21:49:03.230 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/echo
+2021-02-17 21:49:03.232  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is unavailable at the moment, retrying in 15 seconds...
+2021-02-17 21:49:18.501 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/echo
+2021-02-17 21:49:18.501  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is unavailable at the moment, retrying in 15 seconds...
+2021-02-17 21:49:33.782 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/echo
+2021-02-17 21:49:33.782  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is unavailable at the moment, retrying in 15 seconds...
+2021-02-17 21:49:49.021 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/echo
+2021-02-17 21:49:49.035 ERROR LAPTOP-VQ0I1IDC --- [           main] o.s.b.SpringApplication                  : Application run failed
+eu.arrowhead.common.exception.UnavailableServerException: Could not get any response from: https://10.20.30.5:1235/serviceregistry/echo
+	at eu.arrowhead.common.http.HttpService.sendRequest(HttpService.java:155)
+	at eu.arrowhead.common.http.HttpService.sendRequest(HttpService.java:172)
+	at eu.arrowhead.common.ApplicationInitListener.checkServiceRegistryConnection(ApplicationInitListener.java:245)
+	at eu.arrowhead.common.ApplicationInitListener.registerCoreSystemServicesToServiceRegistry(ApplicationInitListener.java:211)
+	at eu.arrowhead.common.ApplicationInitListener.onApplicationEvent(ApplicationInitListener.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:261)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:179)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:142)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at eu.arrowhead.mit.producer.ProducerMain.main(ProducerMain.java:27)
+Caused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "https://10.20.30.5:1235/serviceregistry/echo": Received fatal alert: certificate_unknown; nested exception is javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:744)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:710)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:598)
+	at eu.arrowhead.common.http.HttpService.sendRequest(HttpService.java:144)
+	... 26 more
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:131)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:356)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:293)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:202)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:171)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1491)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1456)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1038)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:735)
+	... 29 more
+2021-02-17 21:49:49.231 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/echo
+2021-02-17 21:49:49.232  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is unavailable at the moment, retrying in 1 seconds...
+2021-02-17 21:49:50.480 ERROR LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : UnavailableServerException occurred at https://10.20.30.5:1235/serviceregistry/unregister?system_name=producer&address=10.20.30.2&port=1232&service_definition=on_ac
+2021-02-17 21:49:50.481  WARN LAPTOP-VQ0I1IDC --- [           main] .s.c.a.CommonAnnotationBeanPostProcessor : Destroy method on bean with name 'producerApplicationInitListener' threw an exception: eu.arrowhead.common.exception.UnavailableServerException: Could not get any response from: https://10.20.30.5:1235/serviceregistry/unregister?system_name=producer&address=10.20.30.2&port=1232&service_definition=on_ac
+2021-02-18 21:39:20.355  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : Starting ProducerMain on LAPTOP-VQ0I1IDC with PID 7536 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\FINAL_PROTOTYPE\Version2\MIT4.0-final_prototype\arrowhead-producer)
+2021-02-18 21:39:20.364  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : No active profile set, falling back to default profiles: default
+2021-02-18 21:39:25.503  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-18 21:39:25.861  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-18 21:39:27.371  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: PRODUCER
+2021-02-18 21:39:27.372  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: NOT SECURED
+2021-02-18 21:39:27.451  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-18 21:39:27.638  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system PRODUCER published 1 service(s).
+2021-02-18 21:39:27.719  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : Started ProducerMain in 7.708 seconds (JVM running for 8.714)
+2021-02-18 21:43:42.351  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : Starting ProducerMain on LAPTOP-VQ0I1IDC with PID 14500 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\FINAL_PROTOTYPE\Version2\MIT4.0-final_prototype\arrowhead-producer)
+2021-02-18 21:43:42.359  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : No active profile set, falling back to default profiles: default
+2021-02-18 21:43:47.003  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-18 21:43:47.343  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-18 21:43:48.716  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: PRODUCER
+2021-02-18 21:43:48.716  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: NOT SECURED
+2021-02-18 21:43:48.782  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-18 21:43:48.986  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system PRODUCER published 1 service(s).
+2021-02-18 21:43:49.056  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : Started ProducerMain in 7.019 seconds (JVM running for 7.858)
+2021-02-18 21:59:02.630  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : Starting ProducerMain on LAPTOP-VQ0I1IDC with PID 1784 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\FINAL_PROTOTYPE\Version2\MIT4.0-final_prototype\arrowhead-producer)
+2021-02-18 21:59:02.641  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : No active profile set, falling back to default profiles: default
+2021-02-18 21:59:07.932  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-18 21:59:08.304  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-18 21:59:09.831  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: PRODUCER
+2021-02-18 21:59:09.832  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: NOT SECURED
+2021-02-18 21:59:09.899  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-18 21:59:10.097  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system PRODUCER published 1 service(s).
+2021-02-18 21:59:10.156  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : Started ProducerMain in 7.871 seconds (JVM running for 8.858)
+2021-02-18 22:00:08.011  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : Starting ProducerMain on LAPTOP-VQ0I1IDC with PID 20752 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\FINAL_PROTOTYPE\Version2\MIT4.0-final_prototype\arrowhead-producer)
+2021-02-18 22:00:08.021  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : No active profile set, falling back to default profiles: default
+2021-02-18 22:00:13.450  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-18 22:00:13.849  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-18 22:00:15.531  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: PRODUCER
+2021-02-18 22:00:15.532  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: NOT SECURED
+2021-02-18 22:00:15.635  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-18 22:00:15.990  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system PRODUCER published 1 service(s).
+2021-02-18 22:00:16.045  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : Started ProducerMain in 8.359 seconds (JVM running for 9.332)
+2021-02-18 22:10:26.687  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : Starting ProducerMain on LAPTOP-VQ0I1IDC with PID 5692 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\FINAL_PROTOTYPE\Version2\MIT4.0-final_prototype\arrowhead-producer)
+2021-02-18 22:10:26.699  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : No active profile set, falling back to default profiles: default
+2021-02-18 22:10:38.883  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-18 22:10:39.994  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-18 22:10:43.949  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: PRODUCER
+2021-02-18 22:10:43.950  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: NOT SECURED
+2021-02-18 22:10:44.118  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-18 22:10:44.827  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system PRODUCER published 1 service(s).
+2021-02-18 22:10:44.960  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : Started ProducerMain in 18.746 seconds (JVM running for 19.862)
+2021-02-18 22:22:14.224  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : Starting ProducerMain on LAPTOP-VQ0I1IDC with PID 20540 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\FINAL_PROTOTYPE\Version2\MIT4.0-final_prototype\arrowhead-producer)
+2021-02-18 22:22:14.234  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : No active profile set, falling back to default profiles: default
+2021-02-18 22:22:20.377  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-18 22:22:20.822  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-18 22:22:22.634  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: PRODUCER
+2021-02-18 22:22:22.635  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: NOT SECURED
+2021-02-18 22:22:22.737  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-18 22:22:22.983  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system PRODUCER published 1 service(s).
+2021-02-18 22:22:23.066  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : Started ProducerMain in 9.25 seconds (JVM running for 10.342)
+2021-02-18 22:22:34.414 ERROR LAPTOP-VQ0I1IDC --- [0.1-1232-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.io.FileNotFoundException: test.txt (Das System kann die angegebene Datei nicht finden)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:211)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:153)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:108)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at eu.arrowhead.mit.utils.ProducerTempSensor.getTempFromSensor(ProducerTempSensor.java:11)
+	at eu.arrowhead.mit.producer.ProducerController.TemperatureAndAirCondition(ProducerController.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:836)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1747)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2021-02-18 22:23:20.793  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : Starting ProducerMain on LAPTOP-VQ0I1IDC with PID 22756 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\FINAL_PROTOTYPE\Version2\MIT4.0-final_prototype\arrowhead-producer)
+2021-02-18 22:23:20.809  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : No active profile set, falling back to default profiles: default
+2021-02-18 22:23:26.978  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-18 22:23:27.446  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-18 22:23:29.220  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: PRODUCER
+2021-02-18 22:23:29.220  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: NOT SECURED
+2021-02-18 22:23:29.308  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-18 22:23:29.546  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system PRODUCER published 1 service(s).
+2021-02-18 22:23:29.619  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.m.p.ProducerMain                     : Started ProducerMain in 9.196 seconds (JVM running for 10.313)
+2021-02-18 22:23:37.688 ERROR LAPTOP-VQ0I1IDC --- [0.1-1232-exec-4] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.io.FileNotFoundException: .\test.txt (Das System kann die angegebene Datei nicht finden)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:211)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:153)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:108)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at eu.arrowhead.mit.utils.ProducerTempSensor.getTempFromSensor(ProducerTempSensor.java:11)
+	at eu.arrowhead.mit.producer.ProducerController.TemperatureAndAirCondition(ProducerController.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:836)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1747)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)

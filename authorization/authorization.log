@@ -3051,3 +3051,33 @@ Verify the connector's configuration, identify and stop any process that's liste
 2020-11-23 21:50:47.748  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
 2020-11-23 21:50:48.360  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Core system AUTHORIZATION published 4 service(s).
 2020-11-23 21:50:49.316  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.a.AuthorizationMain                : Started AuthorizationMain in 9.948 seconds (JVM running for 10.922)
+2021-02-18 21:38:21.850  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : Starting AuthorizationMain on LAPTOP-VQ0I1IDC with PID 15380 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\FINAL_PROTOTYPE\Version2\MIT4.0-final_prototype\authorization)
+2021-02-18 21:38:21.858  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : No active profile set, falling back to default profiles: default
+2021-02-18 21:38:27.906  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-18 21:38:28.225  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-18 21:38:28.616  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : PayloadSizeFilter is active
+2021-02-18 21:38:29.902  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: AUTHORIZATION
+2021-02-18 21:38:29.903  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: NOT SECURED
+2021-02-18 21:38:30.139  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-18 21:38:31.067  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system AUTHORIZATION published 4 service(s).
+2021-02-18 21:38:31.139  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : Started AuthorizationMain in 9.57 seconds (JVM running for 10.346)
+2021-02-18 21:43:11.189  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : Starting AuthorizationMain on LAPTOP-VQ0I1IDC with PID 16764 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\FINAL_PROTOTYPE\Version2\MIT4.0-final_prototype\authorization)
+2021-02-18 21:43:11.201  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : No active profile set, falling back to default profiles: default
+2021-02-18 21:43:16.799  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-18 21:43:17.070  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-18 21:43:17.442  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : PayloadSizeFilter is active
+2021-02-18 21:43:18.534  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: AUTHORIZATION
+2021-02-18 21:43:18.534  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: NOT SECURED
+2021-02-18 21:43:18.739  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-18 21:43:19.685  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system AUTHORIZATION published 4 service(s).
+2021-02-18 21:43:19.778  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : Started AuthorizationMain in 8.923 seconds (JVM running for 9.882)
+2021-02-18 22:09:50.234  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : Starting AuthorizationMain on LAPTOP-VQ0I1IDC with PID 22376 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\FINAL_PROTOTYPE\Version2\MIT4.0-final_prototype\authorization)
+2021-02-18 22:09:50.247  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : No active profile set, falling back to default profiles: default
+2021-02-18 22:10:00.080  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-18 22:10:00.584  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-18 22:10:01.113  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : PayloadSizeFilter is active
+2021-02-18 22:10:02.912  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: AUTHORIZATION
+2021-02-18 22:10:02.912  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: NOT SECURED
+2021-02-18 22:10:03.215  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-18 22:10:04.367  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system AUTHORIZATION published 4 service(s).
+2021-02-18 22:10:04.456  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : Started AuthorizationMain in 14.65 seconds (JVM running for 15.885)
