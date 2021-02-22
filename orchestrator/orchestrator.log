@@ -1756,3 +1756,13 @@ Verify the connector's configuration, identify and stop any process that's liste
 2020-11-23 21:47:08.955  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
 2020-11-23 21:47:09.097  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Core system ORCHESTRATOR published 1 service(s).
 2020-11-23 21:47:09.728  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.o.OrchestratorMain                 : Started OrchestratorMain in 7.854 seconds (JVM running for 8.656)
+2021-02-22 11:08:34.401  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.o.OrchestratorMain                 : Starting OrchestratorMain on LAPTOP-VQ0I1IDC with PID 17736 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\UC3_GITHUB\MIT4.0\orchestrator)
+2021-02-22 11:08:34.411  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.o.OrchestratorMain                 : No active profile set, falling back to default profiles: default
+2021-02-22 11:08:42.353  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-22 11:08:42.819  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 11:08:43.388  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : PayloadSizeFilter is active
+2021-02-22 11:08:45.124  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: ORCHESTRATOR
+2021-02-22 11:08:45.125  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: NOT SECURED
+2021-02-22 11:08:45.233  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-22 11:08:45.485  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system ORCHESTRATOR published 1 service(s).
+2021-02-22 11:08:45.564  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.o.OrchestratorMain                 : Started OrchestratorMain in 11.611 seconds (JVM running for 13.003)

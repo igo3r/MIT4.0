@@ -161,66 +161,33 @@ CREATE TABLE `logs` (
 
 -- Set up privileges
 
--- Service Registry
-DROP USER IF EXISTS 'service_registry'@'localhost';
-CREATE USER IF NOT EXISTS 'service_registry'@'localhost' IDENTIFIED BY 'ZzNNpxrbZGVvfJ8';
-GRANT ALL PRIVILEGES ON `arrowhead`.`cloud` TO 'service_registry'@'localhost';
-GRANT ALL PRIVILEGES ON `arrowhead`.`service_registry` TO 'service_registry'@'localhost';
-GRANT ALL PRIVILEGES ON `arrowhead`.`service_registry_interface_connection` TO 'service_registry'@'localhost';
-GRANT ALL PRIVILEGES ON `arrowhead`.`service_definition` TO 'service_registry'@'localhost';
-GRANT ALL PRIVILEGES ON `arrowhead`.`service_interface` TO 'service_registry'@'localhost';
-GRANT ALL PRIVILEGES ON `arrowhead`.`system_` TO 'service_registry'@'localhost';
-GRANT ALL PRIVILEGES ON `arrowhead`.`logs` TO 'service_registry'@'localhost';
+-- MITADMIN
+DROP USER IF EXISTS 'mitadmin'@'localhost';
+CREATE USER IF NOT EXISTS 'mitadmin'@'localhost' IDENTIFIED BY 'mit';
+GRANT ALL PRIVILEGES ON `arrowhead`.`cloud` TO 'mitadmin'@'localhost';
+GRANT ALL PRIVILEGES ON `arrowhead`.`service_definition` TO 'mitadmin'@'localhost';
+GRANT ALL PRIVILEGES ON `arrowhead`.`service_interface` TO 'mitadmin'@'localhost';
+GRANT ALL PRIVILEGES ON `arrowhead`.`orchestrator_store` TO 'mitadmin'@'localhost';
+GRANT ALL PRIVILEGES ON `arrowhead`.`system_` TO 'mitadmin'@'localhost';
+GRANT ALL PRIVILEGES ON `arrowhead`.`logs` TO 'mitadmin'@'localhost';
+GRANT ALL PRIVILEGES ON `arrowhead`.`authorization_intra_cloud` TO 'mitadmin'@'localhost';
+GRANT ALL PRIVILEGES ON `arrowhead`.`authorization_intra_cloud_interface_connection` TO 'mitadmin'@'localhost';
+GRANT ALL PRIVILEGES ON `arrowhead`.`service_registry` TO 'mitadmin'@'localhost';
+GRANT ALL PRIVILEGES ON `arrowhead`.`service_registry_interface_connection` TO 'mitadmin'@'localhost';
 
-DROP USER IF EXISTS 'service_registry'@'%';
-CREATE USER IF NOT EXISTS 'service_registry'@'%' IDENTIFIED BY 'ZzNNpxrbZGVvfJ8';
-GRANT ALL PRIVILEGES ON `arrowhead`.`cloud` TO 'service_registry'@'%';
-GRANT ALL PRIVILEGES ON `arrowhead`.`service_registry` TO 'service_registry'@'%';
-GRANT ALL PRIVILEGES ON `arrowhead`.`service_registry_interface_connection` TO 'service_registry'@'%';
-GRANT ALL PRIVILEGES ON `arrowhead`.`service_definition` TO 'service_registry'@'%';
-GRANT ALL PRIVILEGES ON `arrowhead`.`service_interface` TO 'service_registry'@'%';
-GRANT ALL PRIVILEGES ON `arrowhead`.`system_` TO 'service_registry'@'%';
-GRANT ALL PRIVILEGES ON `arrowhead`.`logs` TO 'service_registry'@'%';
+DROP USER IF EXISTS 'mitadmin'@'%';
+CREATE USER IF NOT EXISTS 'mitadmin'@'%' IDENTIFIED BY 'mit';
+GRANT ALL PRIVILEGES ON `arrowhead`.`cloud` TO 'mitadmin'@'%';
+GRANT ALL PRIVILEGES ON `arrowhead`.`service_definition` TO 'mitadmin'@'%';
+GRANT ALL PRIVILEGES ON `arrowhead`.`service_interface` TO 'mitadmin'@'%';
+GRANT ALL PRIVILEGES ON `arrowhead`.`orchestrator_store` TO 'mitadmin'@'%';
+GRANT ALL PRIVILEGES ON `arrowhead`.`system_` TO 'mitadmin'@'%';
+GRANT ALL PRIVILEGES ON `arrowhead`.`logs` TO 'mitadmin'@'%';
+GRANT ALL PRIVILEGES ON `arrowhead`.`authorization_intra_cloud` TO 'mitadmin'@'%';
+GRANT ALL PRIVILEGES ON `arrowhead`.`authorization_intra_cloud_interface_connection` TO 'mitadmin'@'%';
+GRANT ALL PRIVILEGES ON `arrowhead`.`service_registry` TO 'mitadmin'@'%';
+GRANT ALL PRIVILEGES ON `arrowhead`.`service_registry_interface_connection` TO 'mitadmin'@'%';
 
--- Authorization
-DROP USER IF EXISTS 'authorization'@'localhost';
-CREATE USER IF NOT EXISTS 'authorization'@'localhost' IDENTIFIED BY 'hqZFUkuHxhekio3';
-GRANT ALL PRIVILEGES ON `arrowhead`.`cloud` TO 'authorization'@'localhost';
-GRANT ALL PRIVILEGES ON `arrowhead`.`authorization_intra_cloud` TO 'authorization'@'localhost';
-GRANT ALL PRIVILEGES ON `arrowhead`.`authorization_intra_cloud_interface_connection` TO 'authorization'@'localhost';
-GRANT ALL PRIVILEGES ON `arrowhead`.`service_definition` TO 'authorization'@'localhost';
-GRANT ALL PRIVILEGES ON `arrowhead`.`service_interface` TO 'authorization'@'localhost';
-GRANT ALL PRIVILEGES ON `arrowhead`.`system_` TO 'authorization'@'localhost';
-GRANT ALL PRIVILEGES ON `arrowhead`.`logs` TO 'authorization'@'localhost';
-
-DROP USER IF EXISTS 'authorization'@'%';
-CREATE USER IF NOT EXISTS 'authorization'@'%' IDENTIFIED BY 'hqZFUkuHxhekio3';
-GRANT ALL PRIVILEGES ON `arrowhead`.`cloud` TO 'authorization'@'%';
-GRANT ALL PRIVILEGES ON `arrowhead`.`authorization_intra_cloud` TO 'authorization'@'%';
-GRANT ALL PRIVILEGES ON `arrowhead`.`authorization_intra_cloud_interface_connection` TO 'authorization'@'%';
-GRANT ALL PRIVILEGES ON `arrowhead`.`service_definition` TO 'authorization'@'%';
-GRANT ALL PRIVILEGES ON `arrowhead`.`service_interface` TO 'authorization'@'%';
-GRANT ALL PRIVILEGES ON `arrowhead`.`system_` TO 'authorization'@'%';
-GRANT ALL PRIVILEGES ON `arrowhead`.`logs` TO 'authorization'@'%';
-
--- Orchestrator
-DROP USER IF EXISTS 'orchestrator'@'localhost';
-CREATE USER IF NOT EXISTS 'orchestrator'@'localhost' IDENTIFIED BY 'KbgD2mTr8DQ4vtc';
-GRANT ALL PRIVILEGES ON `arrowhead`.`cloud` TO 'orchestrator'@'localhost';
-GRANT ALL PRIVILEGES ON `arrowhead`.`service_definition` TO 'orchestrator'@'localhost';
-GRANT ALL PRIVILEGES ON `arrowhead`.`service_interface` TO 'orchestrator'@'localhost';
-GRANT ALL PRIVILEGES ON `arrowhead`.`orchestrator_store` TO 'orchestrator'@'localhost';
-GRANT ALL PRIVILEGES ON `arrowhead`.`system_` TO 'orchestrator'@'localhost';
-GRANT ALL PRIVILEGES ON `arrowhead`.`logs` TO 'orchestrator'@'localhost';
-
-DROP USER IF EXISTS 'orchestrator'@'%';
-CREATE USER IF NOT EXISTS 'orchestrator'@'%' IDENTIFIED BY 'KbgD2mTr8DQ4vtc';
-GRANT ALL PRIVILEGES ON `arrowhead`.`cloud` TO 'orchestrator'@'%';
-GRANT ALL PRIVILEGES ON `arrowhead`.`service_definition` TO 'orchestrator'@'%';
-GRANT ALL PRIVILEGES ON `arrowhead`.`service_interface` TO 'orchestrator'@'%';
-GRANT ALL PRIVILEGES ON `arrowhead`.`orchestrator_store` TO 'orchestrator'@'%';
-GRANT ALL PRIVILEGES ON `arrowhead`.`system_` TO 'orchestrator'@'%';
-GRANT ALL PRIVILEGES ON `arrowhead`.`logs` TO 'orchestrator'@'%';
 
 FLUSH PRIVILEGES;
 

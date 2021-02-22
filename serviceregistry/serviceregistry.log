@@ -24772,3 +24772,719 @@ eu.arrowhead.common.exception.InvalidParameterException: No service exists with 
 2020-11-23 21:48:38.060 DEBUG LAPTOP-G2IO37NG --- [0.1-2255-exec-6] e.a.c.s.d.s.RegistryUtils                : filterOnInterfaces started...
 2020-11-23 21:48:38.060 DEBUG LAPTOP-G2IO37NG --- [0.1-2255-exec-6] e.a.c.s.d.s.ServiceRegistryDBService     : Potential service providers after filtering: 1
 2020-11-23 21:48:38.061 DEBUG LAPTOP-G2IO37NG --- [0.1-2255-exec-6] e.a.c.s.ServiceRegistryController        : Return 1 providers for service get_array
+2021-02-22 11:06:58.125  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.s.ServiceRegistryMain              : Starting ServiceRegistryMain on LAPTOP-VQ0I1IDC with PID 14160 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\UC3_GITHUB\MIT4.0\serviceregistry)
+2021-02-22 11:06:58.138 DEBUG LAPTOP-VQ0I1IDC --- [           main] e.a.c.s.ServiceRegistryMain              : Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2021-02-22 11:06:58.141  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.s.ServiceRegistryMain              : No active profile set, falling back to default profiles: default
+2021-02-22 11:06:59.512 ERROR LAPTOP-VQ0I1IDC --- [cLoggerConfig-4] c.z.h.p.HikariPool                       : HikariPool-1 - Exception during pool initialization.
+java.sql.SQLSyntaxErrorException: Unknown database 'arrowhead'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81)
+	at eu.arrowhead.common.log4j2.JDBCConnectionFactoryForLog4J2.getConnection(JDBCConnectionFactoryForLog4J2.java:48)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.logging.log4j.core.appender.db.jdbc.FactoryMethodConnectionSource$1.getConnection(FactoryMethodConnectionSource.java:105)
+	at org.apache.logging.log4j.core.appender.db.jdbc.FactoryMethodConnectionSource.getConnection(FactoryMethodConnectionSource.java:53)
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager.connectAndPrepare(JdbcDatabaseManager.java:567)
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager.connectAndStart(JdbcDatabaseManager.java:588)
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager.writeThrough(JdbcDatabaseManager.java:813)
+	at org.apache.logging.log4j.core.appender.db.AbstractDatabaseManager.write(AbstractDatabaseManager.java:264)
+	at org.apache.logging.log4j.core.appender.db.AbstractDatabaseAppender.append(AbstractDatabaseAppender.java:110)
+	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:156)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:129)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:120)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:84)
+	at org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:464)
+	at org.apache.logging.log4j.core.async.AsyncLoggerConfig.callAppenders(AsyncLoggerConfig.java:127)
+	at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:448)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:431)
+	at org.apache.logging.log4j.core.async.AsyncLoggerConfig.log(AsyncLoggerConfig.java:121)
+	at org.apache.logging.log4j.core.async.AsyncLoggerConfig.logToAsyncLoggerConfigsOnCurrentThread(AsyncLoggerConfig.java:169)
+	at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$Log4jEventWrapperHandler.onEvent(AsyncLoggerConfigDisruptor.java:111)
+	at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$Log4jEventWrapperHandler.onEvent(AsyncLoggerConfigDisruptor.java:97)
+	at com.lmax.disruptor.BatchEventProcessor.run(BatchEventProcessor.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2021-02-22 11:07:00.523 ERROR LAPTOP-VQ0I1IDC --- [cLoggerConfig-4] c.z.h.p.HikariPool                       : HikariPool-2 - Exception during pool initialization.
+java.sql.SQLSyntaxErrorException: Unknown database 'arrowhead'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81)
+	at eu.arrowhead.common.log4j2.JDBCConnectionFactoryForLog4J2.getConnection(JDBCConnectionFactoryForLog4J2.java:48)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.logging.log4j.core.appender.db.jdbc.FactoryMethodConnectionSource$1.getConnection(FactoryMethodConnectionSource.java:105)
+	at org.apache.logging.log4j.core.appender.db.jdbc.FactoryMethodConnectionSource.getConnection(FactoryMethodConnectionSource.java:53)
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager.connectAndPrepare(JdbcDatabaseManager.java:567)
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager.access$800(JdbcDatabaseManager.java:62)
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager$Reconnector.reconnect(JdbcDatabaseManager.java:174)
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager.reconnectOn(JdbcDatabaseManager.java:654)
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager.connectAndStart(JdbcDatabaseManager.java:590)
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager.writeThrough(JdbcDatabaseManager.java:813)
+	at org.apache.logging.log4j.core.appender.db.AbstractDatabaseManager.write(AbstractDatabaseManager.java:264)
+	at org.apache.logging.log4j.core.appender.db.AbstractDatabaseAppender.append(AbstractDatabaseAppender.java:110)
+	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:156)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:129)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:120)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:84)
+	at org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:464)
+	at org.apache.logging.log4j.core.async.AsyncLoggerConfig.callAppenders(AsyncLoggerConfig.java:127)
+	at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:448)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:431)
+	at org.apache.logging.log4j.core.async.AsyncLoggerConfig.log(AsyncLoggerConfig.java:121)
+	at org.apache.logging.log4j.core.async.AsyncLoggerConfig.logToAsyncLoggerConfigsOnCurrentThread(AsyncLoggerConfig.java:169)
+	at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$Log4jEventWrapperHandler.onEvent(AsyncLoggerConfigDisruptor.java:111)
+	at org.apache.logging.log4j.core.async.AsyncLoggerConfigDisruptor$Log4jEventWrapperHandler.onEvent(AsyncLoggerConfigDisruptor.java:97)
+	at com.lmax.disruptor.BatchEventProcessor.run(BatchEventProcessor.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2021-02-22 11:07:03.422 ERROR LAPTOP-VQ0I1IDC --- [           main] c.z.h.p.HikariPool                       : HikariPool-3 - Exception during pool initialization.
+java.sql.SQLSyntaxErrorException: Unknown database 'arrowhead'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:157)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:319)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:356)
+	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:73)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:142)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:113)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$7a75ca34.CGLIB$jpaVendorAdapter$9(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$7a75ca34$$FastClassBySpringCGLIB$$3bf00856.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$7a75ca34.jpaVendorAdapter(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1248)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1168)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1248)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1168)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at eu.arrowhead.core.serviceregistry.ServiceRegistryMain.main(ServiceRegistryMain.java:26)
+2021-02-22 11:07:03.423  WARN LAPTOP-VQ0I1IDC --- [           main] o.s.b.a.o.j.DatabaseLookup               : Unable to determine jdbc url from datasource
+org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta-data; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'arrowhead'
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:328)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:356)
+	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:73)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:142)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:113)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$7a75ca34.CGLIB$jpaVendorAdapter$9(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$7a75ca34$$FastClassBySpringCGLIB$$3bf00856.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$7a75ca34.jpaVendorAdapter(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1248)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1168)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1248)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1168)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at eu.arrowhead.core.serviceregistry.ServiceRegistryMain.main(ServiceRegistryMain.java:26)
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'arrowhead'
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:319)
+	... 62 more
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'arrowhead'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:157)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	... 63 more
+2021-02-22 11:07:04.968 ERROR LAPTOP-VQ0I1IDC --- [           main] c.z.h.p.HikariPool                       : HikariPool-3 - Exception during pool initialization.
+java.sql.SQLSyntaxErrorException: Unknown database 'arrowhead'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:94)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:179)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:119)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:904)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:935)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at eu.arrowhead.core.serviceregistry.ServiceRegistryMain.main(ServiceRegistryMain.java:26)
+2021-02-22 11:07:04.969  WARN LAPTOP-VQ0I1IDC --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata : Unknown database 'arrowhead'
+2021-02-22 11:07:05.997 DEBUG LAPTOP-VQ0I1IDC --- [           main] e.a.c.CoreSystemRegistrationProperties   : initCoreSystem started...
+2021-02-22 11:07:06.025 DEBUG LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : Initializing HttpService...
+2021-02-22 11:07:06.381 DEBUG LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : HttpService is initialized.
+2021-02-22 11:07:06.530 ERROR LAPTOP-VQ0I1IDC --- [ger-Reconnector] c.z.h.p.HikariPool                       : HikariPool-4 - Exception during pool initialization.
+java.sql.SQLSyntaxErrorException: Unknown database 'arrowhead'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81)
+	at eu.arrowhead.common.log4j2.JDBCConnectionFactoryForLog4J2.getConnection(JDBCConnectionFactoryForLog4J2.java:48)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.logging.log4j.core.appender.db.jdbc.FactoryMethodConnectionSource$1.getConnection(FactoryMethodConnectionSource.java:105)
+	at org.apache.logging.log4j.core.appender.db.jdbc.FactoryMethodConnectionSource.getConnection(FactoryMethodConnectionSource.java:53)
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager.connectAndPrepare(JdbcDatabaseManager.java:567)
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager.access$800(JdbcDatabaseManager.java:62)
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager$Reconnector.reconnect(JdbcDatabaseManager.java:174)
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager$Reconnector.run(JdbcDatabaseManager.java:185)
+2021-02-22 11:07:08.401 ERROR LAPTOP-VQ0I1IDC --- [           main] c.z.h.p.HikariPool                       : HikariPool-3 - Exception during pool initialization.
+java.sql.SQLSyntaxErrorException: Unknown database 'arrowhead'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:157)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:323)
+	at org.springframework.boot.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:123)
+	at org.springframework.boot.jdbc.AbstractDataSourceInitializer.isEnabled(AbstractDataSourceInitializer.java:74)
+	at org.springframework.boot.jdbc.AbstractDataSourceInitializer.initialize(AbstractDataSourceInitializer.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:363)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:307)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:136)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:452)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:526)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:496)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:636)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:180)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:843)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at eu.arrowhead.core.serviceregistry.ServiceRegistryMain.main(ServiceRegistryMain.java:26)
+2021-02-22 11:07:08.442  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-22 11:07:08.833  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 11:07:09.282  INFO LAPTOP-VQ0I1IDC --- [           main] .c.s.q.t.ProvidersReachabilityTaskConfig : Providers reachabilitiy task is not adjusted
+2021-02-22 11:07:09.290  INFO LAPTOP-VQ0I1IDC --- [           main] .c.s.q.t.ProvidersReachabilityTaskConfig : Services end of validity task is not adjusted
+2021-02-22 11:07:09.535  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : PayloadSizeFilter is active
+2021-02-22 11:07:11.352 DEBUG LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Initialization in onApplicationEvent()...
+2021-02-22 11:07:11.353  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: SERVICE_REGISTRY
+2021-02-22 11:07:11.353  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: NOT SECURED
+2021-02-22 11:07:11.353 DEBUG LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : registerCoreSystemServicesToServiceRegistry started...
+2021-02-22 11:07:11.354 DEBUG LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : initRequiredCoreSystemServiceUris started...
+2021-02-22 11:07:11.354 DEBUG LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : createQueryUri started...
+2021-02-22 11:07:11.354 DEBUG LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Initialization in onApplicationEvent() is done.
+2021-02-22 11:07:11.410  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.s.ServiceRegistryMain              : Started ServiceRegistryMain in 13.69 seconds (JVM running for 14.737)
+2021-02-22 11:07:12.540 ERROR LAPTOP-VQ0I1IDC --- [ger-Reconnector] c.z.h.p.HikariPool                       : HikariPool-5 - Exception during pool initialization.
+java.sql.SQLSyntaxErrorException: Unknown database 'arrowhead'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81)
+	at eu.arrowhead.common.log4j2.JDBCConnectionFactoryForLog4J2.getConnection(JDBCConnectionFactoryForLog4J2.java:48)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.logging.log4j.core.appender.db.jdbc.FactoryMethodConnectionSource$1.getConnection(FactoryMethodConnectionSource.java:105)
+	at org.apache.logging.log4j.core.appender.db.jdbc.FactoryMethodConnectionSource.getConnection(FactoryMethodConnectionSource.java:53)
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager.connectAndPrepare(JdbcDatabaseManager.java:567)
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager.access$800(JdbcDatabaseManager.java:62)
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager$Reconnector.reconnect(JdbcDatabaseManager.java:174)
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager$Reconnector.run(JdbcDatabaseManager.java:185)
+2021-02-22 11:07:18.545 ERROR LAPTOP-VQ0I1IDC --- [ger-Reconnector] c.z.h.p.HikariPool                       : HikariPool-6 - Exception during pool initialization.
+java.sql.SQLSyntaxErrorException: Unknown database 'arrowhead'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81)
+	at eu.arrowhead.common.log4j2.JDBCConnectionFactoryForLog4J2.getConnection(JDBCConnectionFactoryForLog4J2.java:48)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.logging.log4j.core.appender.db.jdbc.FactoryMethodConnectionSource$1.getConnection(FactoryMethodConnectionSource.java:105)
+	at org.apache.logging.log4j.core.appender.db.jdbc.FactoryMethodConnectionSource.getConnection(FactoryMethodConnectionSource.java:53)
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager.connectAndPrepare(JdbcDatabaseManager.java:567)
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager.access$800(JdbcDatabaseManager.java:62)
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager$Reconnector.reconnect(JdbcDatabaseManager.java:174)
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager$Reconnector.run(JdbcDatabaseManager.java:185)
+2021-02-22 11:07:46.733  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.s.ServiceRegistryMain              : Starting ServiceRegistryMain on LAPTOP-VQ0I1IDC with PID 14492 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\UC3_GITHUB\MIT4.0\serviceregistry)
+2021-02-22 11:07:46.743 DEBUG LAPTOP-VQ0I1IDC --- [           main] e.a.c.s.ServiceRegistryMain              : Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2021-02-22 11:07:46.745  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.s.ServiceRegistryMain              : No active profile set, falling back to default profiles: default
+2021-02-22 11:07:53.103 DEBUG LAPTOP-VQ0I1IDC --- [           main] e.a.c.CoreSystemRegistrationProperties   : initCoreSystem started...
+2021-02-22 11:07:53.137 DEBUG LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : Initializing HttpService...
+2021-02-22 11:07:53.501 DEBUG LAPTOP-VQ0I1IDC --- [           main] e.a.c.h.HttpService                      : HttpService is initialized.
+2021-02-22 11:07:54.750  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-22 11:07:55.310  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 11:07:55.909  INFO LAPTOP-VQ0I1IDC --- [           main] .c.s.q.t.ProvidersReachabilityTaskConfig : Providers reachabilitiy task is not adjusted
+2021-02-22 11:07:55.922  INFO LAPTOP-VQ0I1IDC --- [           main] .c.s.q.t.ProvidersReachabilityTaskConfig : Services end of validity task is not adjusted
+2021-02-22 11:07:56.283  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : PayloadSizeFilter is active
+2021-02-22 11:07:58.638 DEBUG LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Initialization in onApplicationEvent()...
+2021-02-22 11:07:58.638  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: SERVICE_REGISTRY
+2021-02-22 11:07:58.639  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: NOT SECURED
+2021-02-22 11:07:58.639 DEBUG LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : registerCoreSystemServicesToServiceRegistry started...
+2021-02-22 11:07:58.639 DEBUG LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : initRequiredCoreSystemServiceUris started...
+2021-02-22 11:07:58.639 DEBUG LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : createQueryUri started...
+2021-02-22 11:07:58.640 DEBUG LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Initialization in onApplicationEvent() is done.
+2021-02-22 11:07:58.712  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.s.ServiceRegistryMain              : Started ServiceRegistryMain in 12.44 seconds (JVM running for 13.702)
+2021-02-22 11:08:24.747 DEBUG LAPTOP-VQ0I1IDC --- [eduler_Worker-1] e.a.c.q.u.UriCrawlerTask                 : STARTED: URI crawler task
+2021-02-22 11:08:24.748 DEBUG LAPTOP-VQ0I1IDC --- [eduler_Worker-1] e.a.c.q.u.UriCrawlerTask                 : getRequiredServices started...
+2021-02-22 11:08:24.748 DEBUG LAPTOP-VQ0I1IDC --- [eduler_Worker-1] e.a.c.q.u.UriCrawlerTask                 : cancelJob started...
+2021-02-22 11:08:24.749 DEBUG LAPTOP-VQ0I1IDC --- [eduler_Worker-1] e.a.c.q.u.UriCrawlerTask                 : STOPPED: URI crawler task.
+2021-02-22 11:08:28.243 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-1] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:08:28.515 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:08:28.711 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.ServiceRegistryController        : Service query request received
+2021-02-22 11:08:28.751 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : queryRegistry is started...
+2021-02-22 11:08:28.880 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : Service definition not found: authorization-control-intra
+2021-02-22 11:08:28.884 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.ServiceRegistryController        : Return 0 providers for service authorization-control-intra
+2021-02-22 11:08:28.951 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-3] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:08:28.961 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-3] e.a.c.s.ServiceRegistryController        : New service registration request recieved
+2021-02-22 11:08:28.964 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-3] e.a.c.s.ServiceRegistryController        : checkServiceRegistryRequest started...
+2021-02-22 11:08:28.964 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-3] e.a.c.s.ServiceRegistryController        : checkServiceRegistryRequest started...
+2021-02-22 11:08:28.964 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-3] e.a.c.s.ServiceRegistryController        : checkSystemRequest started...
+2021-02-22 11:08:28.965 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-3] e.a.c.i.ServiceInterfaceNameVerifier     : Interface name HTTP-INSECURE-JSON validation result: true
+2021-02-22 11:08:28.975 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-3] e.a.c.s.d.s.ServiceRegistryDBService     : registerServiceResponse started...
+2021-02-22 11:08:28.976 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-3] e.a.c.s.d.s.ServiceRegistryDBService     : checkServiceRegistryRequest started...
+2021-02-22 11:08:28.983 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-3] e.a.c.s.d.s.ServiceRegistryDBService     : createServiceDefinition started...
+2021-02-22 11:08:28.984 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-3] e.a.c.s.d.s.ServiceRegistryDBService     : checkConstraintsOfServiceDefinitionTable started...
+2021-02-22 11:08:29.119 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-3] e.a.c.s.d.s.ServiceRegistryDBService     : createSystem started...
+2021-02-22 11:08:29.120 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-3] e.a.c.s.d.s.ServiceRegistryDBService     : validateNonNullSystemParameters started...
+2021-02-22 11:08:29.121 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-3] e.a.c.s.d.s.ServiceRegistryDBService     : checkConstraintsOfSystemTable started...
+2021-02-22 11:08:29.132 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-3] e.a.c.s.d.s.ServiceRegistryDBService     : createServiceRegistry started...
+2021-02-22 11:08:29.133 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-3] e.a.c.s.d.s.ServiceRegistryDBService     : checkConstraintOfSystemRegistryTable started...
+2021-02-22 11:08:29.149 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-3] e.a.c.s.d.s.ServiceRegistryDBService     : checkSRSecurityValue started...
+2021-02-22 11:08:29.150 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-3] e.a.c.s.d.s.ServiceRegistryDBService     : checkSRServiceInterfacesList started...
+2021-02-22 11:08:29.150 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-3] e.a.c.i.ServiceInterfaceNameVerifier     : Interface name HTTP-INSECURE-JSON validation result: true
+2021-02-22 11:08:29.168 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-3] e.a.c.s.d.s.ServiceRegistryDBService     : findOrCreateServiceInterfaces started...
+2021-02-22 11:08:29.234 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-3] e.a.c.s.ServiceRegistryController        : authorization successfully registers its service authorization-control-intra
+2021-02-22 11:08:29.252 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-4] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:08:29.256 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-4] e.a.c.s.ServiceRegistryController        : Service query request received
+2021-02-22 11:08:29.257 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-4] e.a.c.s.d.s.ServiceRegistryDBService     : queryRegistry is started...
+2021-02-22 11:08:29.261 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-4] e.a.c.s.d.s.ServiceRegistryDBService     : Service definition not found: token-generation
+2021-02-22 11:08:29.261 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-4] e.a.c.s.ServiceRegistryController        : Return 0 providers for service token-generation
+2021-02-22 11:08:29.269 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-5] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:08:29.272 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-5] e.a.c.s.ServiceRegistryController        : New service registration request recieved
+2021-02-22 11:08:29.273 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-5] e.a.c.s.ServiceRegistryController        : checkServiceRegistryRequest started...
+2021-02-22 11:08:29.273 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-5] e.a.c.s.ServiceRegistryController        : checkServiceRegistryRequest started...
+2021-02-22 11:08:29.273 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-5] e.a.c.s.ServiceRegistryController        : checkSystemRequest started...
+2021-02-22 11:08:29.273 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-5] e.a.c.i.ServiceInterfaceNameVerifier     : Interface name HTTP-INSECURE-JSON validation result: true
+2021-02-22 11:08:29.275 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-5] e.a.c.s.d.s.ServiceRegistryDBService     : registerServiceResponse started...
+2021-02-22 11:08:29.275 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-5] e.a.c.s.d.s.ServiceRegistryDBService     : checkServiceRegistryRequest started...
+2021-02-22 11:08:29.279 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-5] e.a.c.s.d.s.ServiceRegistryDBService     : createServiceDefinition started...
+2021-02-22 11:08:29.280 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-5] e.a.c.s.d.s.ServiceRegistryDBService     : checkConstraintsOfServiceDefinitionTable started...
+2021-02-22 11:08:29.294 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-5] e.a.c.s.d.s.ServiceRegistryDBService     : createServiceRegistry started...
+2021-02-22 11:08:29.294 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-5] e.a.c.s.d.s.ServiceRegistryDBService     : checkConstraintOfSystemRegistryTable started...
+2021-02-22 11:08:29.298 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-5] e.a.c.s.d.s.ServiceRegistryDBService     : checkSRSecurityValue started...
+2021-02-22 11:08:29.298 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-5] e.a.c.s.d.s.ServiceRegistryDBService     : checkSRServiceInterfacesList started...
+2021-02-22 11:08:29.299 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-5] e.a.c.i.ServiceInterfaceNameVerifier     : Interface name HTTP-INSECURE-JSON validation result: true
+2021-02-22 11:08:29.302 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-5] e.a.c.s.d.s.ServiceRegistryDBService     : findOrCreateServiceInterfaces started...
+2021-02-22 11:08:29.327 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-5] e.a.c.s.ServiceRegistryController        : authorization successfully registers its service token-generation
+2021-02-22 11:08:29.333 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-7] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:08:29.336 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-7] e.a.c.s.ServiceRegistryController        : Service query request received
+2021-02-22 11:08:29.337 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-7] e.a.c.s.d.s.ServiceRegistryDBService     : queryRegistry is started...
+2021-02-22 11:08:29.339 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-7] e.a.c.s.d.s.ServiceRegistryDBService     : Service definition not found: auth-public-key
+2021-02-22 11:08:29.340 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-7] e.a.c.s.ServiceRegistryController        : Return 0 providers for service auth-public-key
+2021-02-22 11:08:29.351 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:08:29.355 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.ServiceRegistryController        : New service registration request recieved
+2021-02-22 11:08:29.356 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.ServiceRegistryController        : checkServiceRegistryRequest started...
+2021-02-22 11:08:29.356 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.ServiceRegistryController        : checkServiceRegistryRequest started...
+2021-02-22 11:08:29.356 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.ServiceRegistryController        : checkSystemRequest started...
+2021-02-22 11:08:29.356 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.i.ServiceInterfaceNameVerifier     : Interface name HTTP-INSECURE-JSON validation result: true
+2021-02-22 11:08:29.358 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.d.s.ServiceRegistryDBService     : registerServiceResponse started...
+2021-02-22 11:08:29.358 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.d.s.ServiceRegistryDBService     : checkServiceRegistryRequest started...
+2021-02-22 11:08:29.361 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.d.s.ServiceRegistryDBService     : createServiceDefinition started...
+2021-02-22 11:08:29.362 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.d.s.ServiceRegistryDBService     : checkConstraintsOfServiceDefinitionTable started...
+2021-02-22 11:08:29.373 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.d.s.ServiceRegistryDBService     : createServiceRegistry started...
+2021-02-22 11:08:29.373 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.d.s.ServiceRegistryDBService     : checkConstraintOfSystemRegistryTable started...
+2021-02-22 11:08:29.377 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.d.s.ServiceRegistryDBService     : checkSRSecurityValue started...
+2021-02-22 11:08:29.378 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.d.s.ServiceRegistryDBService     : checkSRServiceInterfacesList started...
+2021-02-22 11:08:29.378 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.i.ServiceInterfaceNameVerifier     : Interface name HTTP-INSECURE-JSON validation result: true
+2021-02-22 11:08:29.381 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.d.s.ServiceRegistryDBService     : findOrCreateServiceInterfaces started...
+2021-02-22 11:08:29.395 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.ServiceRegistryController        : authorization successfully registers its service auth-public-key
+2021-02-22 11:08:29.403 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:08:29.406 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.ServiceRegistryController        : Service query request received
+2021-02-22 11:08:29.406 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.d.s.ServiceRegistryDBService     : queryRegistry is started...
+2021-02-22 11:08:29.411 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.d.s.ServiceRegistryDBService     : Service definition not found: authorization-control-subscription
+2021-02-22 11:08:29.411 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.ServiceRegistryController        : Return 0 providers for service authorization-control-subscription
+2021-02-22 11:08:29.416 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:08:29.419 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.s.ServiceRegistryController        : New service registration request recieved
+2021-02-22 11:08:29.419 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.s.ServiceRegistryController        : checkServiceRegistryRequest started...
+2021-02-22 11:08:29.419 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.s.ServiceRegistryController        : checkServiceRegistryRequest started...
+2021-02-22 11:08:29.420 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.s.ServiceRegistryController        : checkSystemRequest started...
+2021-02-22 11:08:29.420 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.i.ServiceInterfaceNameVerifier     : Interface name HTTP-INSECURE-JSON validation result: true
+2021-02-22 11:08:29.421 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.s.d.s.ServiceRegistryDBService     : registerServiceResponse started...
+2021-02-22 11:08:29.421 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.s.d.s.ServiceRegistryDBService     : checkServiceRegistryRequest started...
+2021-02-22 11:08:29.424 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.s.d.s.ServiceRegistryDBService     : createServiceDefinition started...
+2021-02-22 11:08:29.425 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.s.d.s.ServiceRegistryDBService     : checkConstraintsOfServiceDefinitionTable started...
+2021-02-22 11:08:29.434 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.s.d.s.ServiceRegistryDBService     : createServiceRegistry started...
+2021-02-22 11:08:29.435 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.s.d.s.ServiceRegistryDBService     : checkConstraintOfSystemRegistryTable started...
+2021-02-22 11:08:29.438 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.s.d.s.ServiceRegistryDBService     : checkSRSecurityValue started...
+2021-02-22 11:08:29.439 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.s.d.s.ServiceRegistryDBService     : checkSRServiceInterfacesList started...
+2021-02-22 11:08:29.439 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.i.ServiceInterfaceNameVerifier     : Interface name HTTP-INSECURE-JSON validation result: true
+2021-02-22 11:08:29.441 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.s.d.s.ServiceRegistryDBService     : findOrCreateServiceInterfaces started...
+2021-02-22 11:08:29.458 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.s.ServiceRegistryController        : authorization successfully registers its service authorization-control-subscription
+2021-02-22 11:08:45.203 DEBUG LAPTOP-VQ0I1IDC --- [.1-2255-exec-10] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:08:45.375 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-1] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:08:45.379 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-1] e.a.c.s.ServiceRegistryController        : Service query request received
+2021-02-22 11:08:45.381 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-1] e.a.c.s.d.s.ServiceRegistryDBService     : queryRegistry is started...
+2021-02-22 11:08:45.386 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-1] e.a.c.s.d.s.ServiceRegistryDBService     : Service definition not found: orchestration-service
+2021-02-22 11:08:45.386 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-1] e.a.c.s.ServiceRegistryController        : Return 0 providers for service orchestration-service
+2021-02-22 11:08:45.418 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:08:45.423 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.ServiceRegistryController        : New service registration request recieved
+2021-02-22 11:08:45.424 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.ServiceRegistryController        : checkServiceRegistryRequest started...
+2021-02-22 11:08:45.424 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.ServiceRegistryController        : checkServiceRegistryRequest started...
+2021-02-22 11:08:45.425 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.ServiceRegistryController        : checkSystemRequest started...
+2021-02-22 11:08:45.426 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.i.ServiceInterfaceNameVerifier     : Interface name HTTP-INSECURE-JSON validation result: true
+2021-02-22 11:08:45.427 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : registerServiceResponse started...
+2021-02-22 11:08:45.427 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : checkServiceRegistryRequest started...
+2021-02-22 11:08:45.432 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : createServiceDefinition started...
+2021-02-22 11:08:45.432 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : checkConstraintsOfServiceDefinitionTable started...
+2021-02-22 11:08:45.443 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : createSystem started...
+2021-02-22 11:08:45.444 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : validateNonNullSystemParameters started...
+2021-02-22 11:08:45.444 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : checkConstraintsOfSystemTable started...
+2021-02-22 11:08:45.451 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : createServiceRegistry started...
+2021-02-22 11:08:45.451 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : checkConstraintOfSystemRegistryTable started...
+2021-02-22 11:08:45.455 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : checkSRSecurityValue started...
+2021-02-22 11:08:45.456 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : checkSRServiceInterfacesList started...
+2021-02-22 11:08:45.457 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.i.ServiceInterfaceNameVerifier     : Interface name HTTP-INSECURE-JSON validation result: true
+2021-02-22 11:08:45.462 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : findOrCreateServiceInterfaces started...
+2021-02-22 11:08:45.481 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.ServiceRegistryController        : orchestrator successfully registers its service orchestration-service
+2021-02-22 11:09:12.347 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-3] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:09:12.355 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-4] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:09:12.358 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-4] e.a.c.s.ServiceRegistryController        : Service query request received
+2021-02-22 11:09:12.358 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-4] e.a.c.s.d.s.ServiceRegistryDBService     : queryRegistry is started...
+2021-02-22 11:09:12.404 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-4] e.a.c.s.d.s.ServiceRegistryDBService     : Potential service providers before filtering: 1
+2021-02-22 11:09:12.404 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-4] e.a.c.s.d.s.ServiceRegistryDBService     : Potential service providers after filtering: 1
+2021-02-22 11:09:12.406 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-4] e.a.c.s.ServiceRegistryController        : Return 1 providers for service token-generation
+2021-02-22 11:09:12.414 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-5] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:09:12.418 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-5] e.a.c.s.ServiceRegistryController        : Service query request received
+2021-02-22 11:09:12.418 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-5] e.a.c.s.d.s.ServiceRegistryDBService     : queryRegistry is started...
+2021-02-22 11:09:12.433 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-5] e.a.c.s.d.s.ServiceRegistryDBService     : Potential service providers before filtering: 1
+2021-02-22 11:09:12.434 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-5] e.a.c.s.d.s.ServiceRegistryDBService     : Potential service providers after filtering: 1
+2021-02-22 11:09:12.435 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-5] e.a.c.s.ServiceRegistryController        : Return 1 providers for service authorization-control-intra
+2021-02-22 11:09:13.579 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-7] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:09:13.762 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:09:13.765 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.ServiceRegistryController        : Service query request received
+2021-02-22 11:09:13.765 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.d.s.ServiceRegistryDBService     : queryRegistry is started...
+2021-02-22 11:09:13.768 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.d.s.ServiceRegistryDBService     : Service definition not found: cltc_array_single
+2021-02-22 11:09:13.769 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.ServiceRegistryController        : Return 0 providers for service cltc_array_single
+2021-02-22 11:09:13.813 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:09:13.818 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.ServiceRegistryController        : New service registration request recieved
+2021-02-22 11:09:13.819 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.ServiceRegistryController        : checkServiceRegistryRequest started...
+2021-02-22 11:09:13.819 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.ServiceRegistryController        : checkServiceRegistryRequest started...
+2021-02-22 11:09:13.819 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.ServiceRegistryController        : checkSystemRequest started...
+2021-02-22 11:09:13.820 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.i.ServiceInterfaceNameVerifier     : Interface name HTTP-INSECURE-JSON validation result: true
+2021-02-22 11:09:13.823 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.d.s.ServiceRegistryDBService     : registerServiceResponse started...
+2021-02-22 11:09:13.823 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.d.s.ServiceRegistryDBService     : checkServiceRegistryRequest started...
+2021-02-22 11:09:13.826 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.d.s.ServiceRegistryDBService     : createServiceDefinition started...
+2021-02-22 11:09:13.827 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.d.s.ServiceRegistryDBService     : checkConstraintsOfServiceDefinitionTable started...
+2021-02-22 11:09:13.836 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.d.s.ServiceRegistryDBService     : createSystem started...
+2021-02-22 11:09:13.837 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.d.s.ServiceRegistryDBService     : validateNonNullSystemParameters started...
+2021-02-22 11:09:13.837 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.d.s.ServiceRegistryDBService     : checkConstraintsOfSystemTable started...
+2021-02-22 11:09:13.842 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.d.s.ServiceRegistryDBService     : createServiceRegistry started...
+2021-02-22 11:09:13.843 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.d.s.ServiceRegistryDBService     : checkConstraintOfSystemRegistryTable started...
+2021-02-22 11:09:13.847 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.d.s.ServiceRegistryDBService     : checkSRSecurityValue started...
+2021-02-22 11:09:13.848 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.d.s.ServiceRegistryDBService     : checkSRServiceInterfacesList started...
+2021-02-22 11:09:13.848 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.i.ServiceInterfaceNameVerifier     : Interface name HTTP-INSECURE-JSON validation result: true
+2021-02-22 11:09:13.851 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.d.s.ServiceRegistryDBService     : findOrCreateServiceInterfaces started...
+2021-02-22 11:09:13.870 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.ServiceRegistryController        : consumer successfully registers its service cltc_array_single
+2021-02-22 11:09:38.655 DEBUG LAPTOP-VQ0I1IDC --- [.1-2255-exec-10] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:09:38.840 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-1] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:09:38.842 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-1] e.a.c.s.ServiceRegistryController        : Service query request received
+2021-02-22 11:09:38.842 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-1] e.a.c.s.d.s.ServiceRegistryDBService     : queryRegistry is started...
+2021-02-22 11:09:38.844 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-1] e.a.c.s.d.s.ServiceRegistryDBService     : Service definition not found: get_array
+2021-02-22 11:09:38.845 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-1] e.a.c.s.ServiceRegistryController        : Return 0 providers for service get_array
+2021-02-22 11:09:38.880 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:09:38.884 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.ServiceRegistryController        : New service registration request recieved
+2021-02-22 11:09:38.885 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.ServiceRegistryController        : checkServiceRegistryRequest started...
+2021-02-22 11:09:38.886 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.ServiceRegistryController        : checkServiceRegistryRequest started...
+2021-02-22 11:09:38.887 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.ServiceRegistryController        : checkSystemRequest started...
+2021-02-22 11:09:38.888 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.i.ServiceInterfaceNameVerifier     : Interface name HTTP-INSECURE-JSON validation result: true
+2021-02-22 11:09:38.890 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : registerServiceResponse started...
+2021-02-22 11:09:38.892 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : checkServiceRegistryRequest started...
+2021-02-22 11:09:38.897 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : createServiceDefinition started...
+2021-02-22 11:09:38.897 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : checkConstraintsOfServiceDefinitionTable started...
+2021-02-22 11:09:38.907 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : createSystem started...
+2021-02-22 11:09:38.907 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : validateNonNullSystemParameters started...
+2021-02-22 11:09:38.907 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : checkConstraintsOfSystemTable started...
+2021-02-22 11:09:38.911 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : createServiceRegistry started...
+2021-02-22 11:09:38.911 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : checkConstraintOfSystemRegistryTable started...
+2021-02-22 11:09:38.914 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : checkSRSecurityValue started...
+2021-02-22 11:09:38.915 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : checkSRServiceInterfacesList started...
+2021-02-22 11:09:38.915 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.i.ServiceInterfaceNameVerifier     : Interface name HTTP-INSECURE-JSON validation result: true
+2021-02-22 11:09:38.919 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.d.s.ServiceRegistryDBService     : findOrCreateServiceInterfaces started...
+2021-02-22 11:09:38.927 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-2] e.a.c.s.ServiceRegistryController        : producer successfully registers its service get_array
+2021-02-22 11:10:32.464 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-5] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:10:52.806 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:10:52.809 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.ServiceRegistryController        : Service query request received
+2021-02-22 11:10:52.810 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.d.s.ServiceRegistryDBService     : queryRegistry is started...
+2021-02-22 11:10:52.825 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.d.s.ServiceRegistryDBService     : Potential service providers before filtering: 1
+2021-02-22 11:10:52.829 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.d.s.RegistryUtils                : normalizeInterfaceNames started...
+2021-02-22 11:10:52.835 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.d.s.RegistryUtils                : filterOnInterfaces started...
+2021-02-22 11:10:52.837 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.d.s.ServiceRegistryDBService     : Potential service providers after filtering: 1
+2021-02-22 11:10:52.838 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-6] e.a.c.s.ServiceRegistryController        : Return 1 providers for service get_array
+2021-02-22 11:10:53.577 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:10:53.582 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.ServiceRegistryController        : Service query request received
+2021-02-22 11:10:53.587 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.d.s.ServiceRegistryDBService     : queryRegistry is started...
+2021-02-22 11:10:53.604 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.d.s.ServiceRegistryDBService     : Potential service providers before filtering: 1
+2021-02-22 11:10:53.604 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.d.s.RegistryUtils                : normalizeInterfaceNames started...
+2021-02-22 11:10:53.604 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.d.s.RegistryUtils                : filterOnInterfaces started...
+2021-02-22 11:10:53.604 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.d.s.ServiceRegistryDBService     : Potential service providers after filtering: 1
+2021-02-22 11:10:53.604 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-8] e.a.c.s.ServiceRegistryController        : Return 1 providers for service get_array
+2021-02-22 11:10:53.704 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:10:53.707 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.s.ServiceRegistryController        : Service query request received
+2021-02-22 11:10:53.708 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.s.d.s.ServiceRegistryDBService     : queryRegistry is started...
+2021-02-22 11:10:53.726 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.s.d.s.ServiceRegistryDBService     : Potential service providers before filtering: 1
+2021-02-22 11:10:53.726 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.s.d.s.RegistryUtils                : normalizeInterfaceNames started...
+2021-02-22 11:10:53.727 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.s.d.s.RegistryUtils                : filterOnInterfaces started...
+2021-02-22 11:10:53.727 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.s.d.s.ServiceRegistryDBService     : Potential service providers after filtering: 1
+2021-02-22 11:10:53.727 DEBUG LAPTOP-VQ0I1IDC --- [0.1-2255-exec-9] e.a.c.s.ServiceRegistryController        : Return 1 providers for service get_array
+2021-02-22 11:10:53.841 DEBUG LAPTOP-VQ0I1IDC --- [.1-2255-exec-10] e.a.c.f.ArrowheadFilter                  : Checking payload size...
+2021-02-22 11:10:53.856 DEBUG LAPTOP-VQ0I1IDC --- [.1-2255-exec-10] e.a.c.s.ServiceRegistryController        : Service query request received
+2021-02-22 11:10:53.858 DEBUG LAPTOP-VQ0I1IDC --- [.1-2255-exec-10] e.a.c.s.d.s.ServiceRegistryDBService     : queryRegistry is started...
+2021-02-22 11:10:53.879 DEBUG LAPTOP-VQ0I1IDC --- [.1-2255-exec-10] e.a.c.s.d.s.ServiceRegistryDBService     : Potential service providers before filtering: 1
+2021-02-22 11:10:53.881 DEBUG LAPTOP-VQ0I1IDC --- [.1-2255-exec-10] e.a.c.s.d.s.RegistryUtils                : normalizeInterfaceNames started...
+2021-02-22 11:10:53.881 DEBUG LAPTOP-VQ0I1IDC --- [.1-2255-exec-10] e.a.c.s.d.s.RegistryUtils                : filterOnInterfaces started...
+2021-02-22 11:10:53.881 DEBUG LAPTOP-VQ0I1IDC --- [.1-2255-exec-10] e.a.c.s.d.s.ServiceRegistryDBService     : Potential service providers after filtering: 1
+2021-02-22 11:10:53.882 DEBUG LAPTOP-VQ0I1IDC --- [.1-2255-exec-10] e.a.c.s.ServiceRegistryController        : Return 1 providers for service get_array
