@@ -25,7 +25,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 @Component
-public class ConsumerConnection {
+public class ProducerConnection {
 	@Autowired
 	private HttpService httpService;
 
@@ -65,14 +65,14 @@ public class ConsumerConnection {
 		return retTemp;
 	}
 
-	public OrchestrationResponseDTO getProducer(String scheme, Properties prop, String pName) throws IOException {
+	public OrchestrationResponseDTO getConsumer(String scheme, Properties prop, String pName) throws IOException {
 		UriComponents osUri = createOSUri(scheme);
 		String securityMode = prop.getProperty(MITConstants.SECURITY_MODE);
 		ServiceQueryFormDTO serviceForm;
 
 		// create and configure system request for the requesting system
 		SystemRequestDTO sr = new SystemRequestDTO();
-		sr.setSystemName(MITConstants.MIT_CONSUMER_SYSTEM_NAME);
+		sr.setSystemName(MITConstants.MIT_PRODUCER_SYSTEM_NAME);
 		sr.setAddress(prop.getProperty(MITConstants.SERVER_ADDRESS));
 		sr.setPort(Integer.valueOf(prop.getProperty(MITConstants.SERVER_PORT)));
 
@@ -99,11 +99,6 @@ public class ConsumerConnection {
 				.sendRequest(osUri, HttpMethod.POST, OrchestrationResponseDTO.class, ofr).getBody().getResponse());
 	}
 
-//
-//	public String turnAirConditionOn() throws IOException {
-//		return useDifferentServices(MITConstants.MIT_PRODUCER_SERVICE_GET_STATUS); 
-//	}
-	
 	
 	public String turnAirConditionOn() throws IOException {
 		String retEntity = "";
@@ -119,8 +114,8 @@ public class ConsumerConnection {
 		}
 		
 		
-		OrchestrationResponseDTO orchestrationResponse = getProducer(scheme, prop,
-				MITConstants.MIT_PRODUCER_SERVICE_GET_STATUS);
+		OrchestrationResponseDTO orchestrationResponse = getConsumer(scheme, prop,
+				MITConstants.MIT_CONSUMER_SERVICE_TURN_ON);
 
 		if (!orchestrationResponse.getResponse().isEmpty()) {
 			retEntity = getStatus(scheme, orchestrationResponse.getResponse().get(0).getProvider(),
@@ -128,6 +123,7 @@ public class ConsumerConnection {
 		}
 		return retEntity;
 	}
+	
 	
 
 }

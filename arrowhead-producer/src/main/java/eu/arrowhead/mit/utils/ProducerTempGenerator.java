@@ -4,7 +4,7 @@ import java.util.Random;
 
 import eu.arrowhead.common.mit.MITConstants;
 
-public class ConsumerTempGenerator {
+public class ProducerTempGenerator {
 	double maxValue = MITConstants.MAX_MEASUREMENT_VALUE;
 	double minValue = MITConstants.MIN_MEASUREMENT_VALUE;
 
@@ -23,5 +23,4 @@ public class ConsumerTempGenerator {
 		}
 		return temperature;
 	}
-
 }

@@ -3059,3 +3059,13 @@ Verify the connector's configuration, identify and stop any process that's liste
 2020-11-23 21:41:19.591  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
 2020-11-23 21:41:20.362  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Core system AUTHORIZATION published 4 service(s).
 2020-11-23 21:41:21.075  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.a.AuthorizationMain                : Started AuthorizationMain in 9.288 seconds (JVM running for 10.178)
+2021-02-22 15:57:01.615  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : Starting AuthorizationMain on LAPTOP-VQ0I1IDC with PID 22392 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\UC4_GITHUB\MIT4.0\authorization)
+2021-02-22 15:57:01.626  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : No active profile set, falling back to default profiles: default
+2021-02-22 15:57:09.499  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-22 15:57:09.948  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 15:57:10.489  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : PayloadSizeFilter is active
+2021-02-22 15:57:12.222  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: AUTHORIZATION
+2021-02-22 15:57:12.223  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: NOT SECURED
+2021-02-22 15:57:12.518  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-22 15:57:13.465  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system AUTHORIZATION published 4 service(s).
+2021-02-22 15:57:13.537  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : Started AuthorizationMain in 12.347 seconds (JVM running for 13.666)

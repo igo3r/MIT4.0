@@ -20,11 +20,10 @@ public interface MITConstants {
 	public static final String PROPERTY_C1_ADDRESS = "c1_address";
 	public static final String PROPERTY_C1_PATH = "c1_path";
 	public static final String PROPERTY_C1_PORT = "c1_port";
-	
 	public static final String MIT_SYSTEM_CONSUMER = "Consumer";
 	public static final String MIT_CONSUMER_URI = "/consumer";
-	public static final String MIT_SERVICE_TEMPERATURE_ARRAY_SINGLE = "temperature_array_single";
-	public static final String MIT_CONSUMER_TEMPERATURE_ARRAY_SINGLE_URI = "/temperature_array_single/{runs}/{currentRun}";
+	public static final String MIT_CONSUMER_SERVICE_TURN_ON = "turn_aircondition_on"; 
+	public static final String MIT_CONSUMER_SERVICE_TURN_ON_URI = "/turn_aircondition_on"; 
 	public static final String MIT_CONSUMER_SYSTEM_NAME = "consumer";
 	
 	
@@ -32,11 +31,10 @@ public interface MITConstants {
 	public static final String PROPERTY_C2_ADDRESS = "c2_address";
 	public static final String PROPERTY_C2_PATH = "c2_path";
 	public static final String PROPERTY_C2_PORT = "c2_port";
-	
 	public static final String MIT_SYSTEM_PRODUCER = "Producer";
 	public static final String MIT_PRODUCER_URI = "/producer";
-	public static final String MIT_PRODUCER_SERVICE_GET_STATUS = "on_ac";
-	public static final String MIT_PRODUCER_GET_STATUS_URI = "/on_ac";
+	public static final String MIT_PRODUCER_SERVICE_GET_TEMPERATURE = "get_temperature";
+	public static final String MIT_PRODUCER_GET_TEMPERATURE_URI = "/get_temperature/{runs}/{currentRun}";
 	public static final String MIT_PRODUCER_SYSTEM_NAME = "producer";
 	
 	/* --- Producer(C2) upper- and lower-boundaries for temperature measurement --- */
@@ -64,9 +62,8 @@ public interface MITConstants {
 	
 	public static final int MIT_DEFAULT_CONSUMER_PORT = 2241;
 	public static final int MIT_DEFAULT_PRODUCER_PORT = 2242;
-	public static final int MIT_DEFAULT_CLIENT_PORT = 2248;
+	public static final int MIT_DEFAULT_CLIENT_PORT = 2249;
 	public static final String PARAMETER_ID = "id";
-	
 	
 	/* --- ARRAYS --- */
 	
@@ -74,3 +71,6 @@ public interface MITConstants {
 
 	public static final double[] VALUES_TEMPERATURE_LOW = {24.6,23.4,20.2,23.4,22.2,21.0,20.9,24.7,20.8,23.8,22.1,20.8,22.0,20.4,24.2,20.5,23.4,24.6,22.1,20.6,21.2,24.3,24.4,21.1,24.0,23.7,22.0,22.0,24.3,20.3,24.6,23.5,23.4,22.5,21.9,21.6,21.5,20.2,20.6,23.8,23.1,20.0,22.4,24.9,21.8,25.0,20.7,20.5,23.2,24.9,22.1,23.9,20.6,24.0,23.0,23.2,21.7,21.9,23.4,20.5,24.7,23.4,22.4,21.2,20.0,24.8,21.8,23.2,20.9,22.1,23.6,24.6,23.0,25.0,22.6,24.5,20.1,23.1,22.7,20.8,21.9,24.1,24.9,24.2,22.0,22.1,22.0,22.4,23.7,23.3,21.1,21.7,21.2,20.2,22.6,24.2,22.0,20.3,24.5,23.1,21.6,21.3,23.4,24.4,22.6,20.9,25.0,24.8,20.6,21.3,20.6,22.0,21.1,21.9,24.6,21.0,21.9,21.0,22.2,22.4,24.3,22.2,20.5,20.3,23.1,22.6,24.5,21.5,24.6,23.5,23.6,20.3,24.6,24.3,21.1,23.5,20.3,24.1,24.7,24.9,24.5,24.3,24.1,22.5,24.8,24.5,20.2,20.6,21.2,20.4,22.1,24.6,20.5,22.6,21.3,20.1,23.9,20.9,24.5,21.2,22.7,21.5,24.7,21.4,20.1,23.1,20.3,23.4,20.5,23.9,24.0,23.6,24.3,23.9,24.8,21.5,24.2,24.5,20.0,20.7,21.4,21.6,20.3,21.7,20.6,23.6,20.1,21.3,23.0,23.5,21.5,21.6,24.2,22.2,23.6,21.0,20.3,24.0,24.5,21.5,23.9,21.6,21.8,22.0,23.0,24.5,20.9,20.6,22.4,23.7,21.6,20.2,20.4,21.0,21.8,22.6,20.7,20.9,22.1,21.5,24.0,22.5,25.0,24.5,20.4,23.0,20.8,21.5,20.3,22.8,24.0,23.0,21.3,24.3,20.9,20.7,23.0,21.7,20.5,20.5,20.3,21.4,23.9,21.8,20.3,20.7,24.3,23.4,22.3,22.7,20.7,24.7,21.4,24.5,20.8,24.3,21.4,22.8,22.8,24.6,20.5,20.6,24.8,24.6,24.8,20.8,24.1,20.3,23.4,22.7,22.2,23.4,24.0,23.9,21.0,24.6,23.0,20.4,24.8,21.7,20.4,21.2,23.6,24.9,22.3,23.0,20.9,21.5,20.2,21.7,20.7,20.5,22.8,24.5,21.3,21.6,24.4,24.6,21.5,21.4,22.7,20.8,21.7,24.7,24.5,24.0,23.1,21.1,23.8,24.9,24.0,20.7,24.8,20.3,24.0,22.8,22.4,21.4,22.0,20.3,22.1,24.4,22.0,21.8,20.1,20.6,21.1,23.8,20.5,23.1,23.0,20.2,22.4,22.2,20.6,23.1,22.6,22.2,23.6,23.2,24.1,20.6,23.2,25.0,24.1,23.6,20.3,20.1,23.0,21.8,24.5,24.7,21.9,22.4,24.0,23.6,25.0,22.8,24.9,21.9,22.6,21.4,20.2,20.8,20.6,21.0,24.0,20.8,25.0,24.4,24.9,20.2,22.6,24.6,21.3,21.8,21.4,24.2,21.8,23.8,23.8,24.6,22.3,22.1,22.9,21.7,20.2,21.9,20.4,22.7,22.4,20.3,23.2,24.2,24.2,21.8,21.9,21.5,20.8,24.0,20.4,21.2,22.4,23.5,22.2,21.7,23.3,22.3,20.5,22.2,20.9,24.7,20.7,23.2,22.6,20.2,22.9,24.3,20.9,22.6,23.8,24.2,23.4,20.3,23.0,21.7,24.2,21.3,22.6,24.4,24.8,25.0,23.6,21.8,21.9,21.1,20.9,25.0,22.4,20.4,20.2,21.9,24.9,22.6,20.0,20.4,22.4,22.3,22.8,20.7,23.2,23.2,21.4,22.5,20.9,24.0,25.0,21.4,21.0,20.7,24.5,20.6,20.2,22.6,23.2,23.2,23.4,22.7,20.6,22.0,22.7,20.6,21.4,21.5,22.9,24.0,21.3,25.0,20.7,24.6,21.0,23.2,22.9,21.9,21.4,20.9,21.7,23.5,24.2,22.9,21.3,23.0,20.7,21.8,25.0,20.9,20.7,23.3,23.1,22.0};
 }
+
+	
+	
