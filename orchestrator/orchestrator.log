@@ -1786,3 +1786,63 @@ java.lang.NullPointerException
 2020-11-23 21:51:08.579  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
 2020-11-23 21:51:08.723  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Core system ORCHESTRATOR published 1 service(s).
 2020-11-23 21:51:09.633  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.o.OrchestratorMain                 : Started OrchestratorMain in 8.677 seconds (JVM running for 9.479)
+2021-02-22 12:20:59.384  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.o.OrchestratorMain                 : Starting OrchestratorMain on LAPTOP-VQ0I1IDC with PID 10508 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\UC2_GITHUB\MIT4.0\orchestrator)
+2021-02-22 12:20:59.401  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.o.OrchestratorMain                 : No active profile set, falling back to default profiles: default
+2021-02-22 12:21:03.134  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : OrchestratorAccessControlFilter is active
+2021-02-22 12:21:06.916  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-22 12:21:07.401  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 12:21:07.879  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : PayloadSizeFilter is active
+2021-02-22 12:21:09.583  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: ORCHESTRATOR
+2021-02-22 12:21:09.584  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: SECURED
+2021-02-22 12:21:09.771  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server CN: orchestrator.testcloud2.aitia.arrowhead.eu
+2021-02-22 12:21:10.253  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-22 12:21:10.505  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system ORCHESTRATOR published 1 service(s).
+2021-02-22 12:21:10.999  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.o.OrchestratorMain                 : Started OrchestratorMain in 12.03 seconds (JVM running for 13.155)
+2021-02-22 12:29:24.599  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.o.OrchestratorMain                 : Starting OrchestratorMain on LAPTOP-VQ0I1IDC with PID 20960 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\UC2_GITHUB\MIT4.0\orchestrator)
+2021-02-22 12:29:24.612  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.o.OrchestratorMain                 : No active profile set, falling back to default profiles: default
+2021-02-22 12:29:28.574  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : OrchestratorAccessControlFilter is active
+2021-02-22 12:29:32.267  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-22 12:29:32.675  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 12:29:33.151  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : PayloadSizeFilter is active
+2021-02-22 12:29:34.666  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: ORCHESTRATOR
+2021-02-22 12:29:34.667  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: SECURED
+2021-02-22 12:29:34.844  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server CN: orchestrator.testcloud2.aitia.arrowhead.eu
+2021-02-22 12:29:35.261  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-22 12:29:35.472  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system ORCHESTRATOR published 1 service(s).
+2021-02-22 12:29:36.038  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.o.OrchestratorMain                 : Started OrchestratorMain in 11.887 seconds (JVM running for 13.069)
+2021-02-22 12:51:12.360  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.o.OrchestratorMain                 : Starting OrchestratorMain on LAPTOP-VQ0I1IDC with PID 9416 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\UC2_GITHUB\MIT4.0\orchestrator)
+2021-02-22 12:51:12.370  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.o.OrchestratorMain                 : No active profile set, falling back to default profiles: default
+2021-02-22 12:51:16.030  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : OrchestratorAccessControlFilter is active
+2021-02-22 12:51:19.749  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-22 12:51:20.124  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 12:51:20.618  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : PayloadSizeFilter is active
+2021-02-22 12:51:22.213  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: ORCHESTRATOR
+2021-02-22 12:51:22.214  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: SECURED
+2021-02-22 12:51:22.362  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server CN: orchestrator.testcloud2.aitia.arrowhead.eu
+2021-02-22 12:51:22.867  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-22 12:51:23.132  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system ORCHESTRATOR published 1 service(s).
+2021-02-22 12:51:23.672  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.o.OrchestratorMain                 : Started OrchestratorMain in 11.71 seconds (JVM running for 12.846)
+2021-02-22 12:55:04.487  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.o.OrchestratorMain                 : Starting OrchestratorMain on LAPTOP-VQ0I1IDC with PID 16260 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\UC2_GITHUB\MIT4.0\orchestrator)
+2021-02-22 12:55:04.497  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.o.OrchestratorMain                 : No active profile set, falling back to default profiles: default
+2021-02-22 12:55:08.211  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : OrchestratorAccessControlFilter is active
+2021-02-22 12:55:11.855  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-22 12:55:12.223  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 12:55:12.636  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : PayloadSizeFilter is active
+2021-02-22 12:55:14.092  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: ORCHESTRATOR
+2021-02-22 12:55:14.093  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: SECURED
+2021-02-22 12:55:14.213  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server CN: orchestrator.testcloud2.aitia.arrowhead.eu
+2021-02-22 12:55:14.649  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-22 12:55:14.870  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system ORCHESTRATOR published 1 service(s).
+2021-02-22 12:55:15.399  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.o.OrchestratorMain                 : Started OrchestratorMain in 11.316 seconds (JVM running for 12.44)
+2021-02-22 15:42:45.632  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.o.OrchestratorMain                 : Starting OrchestratorMain on LAPTOP-VQ0I1IDC with PID 22428 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\UC2_GITHUB\MIT4.0\orchestrator)
+2021-02-22 15:42:45.641  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.o.OrchestratorMain                 : No active profile set, falling back to default profiles: default
+2021-02-22 15:42:48.835  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : OrchestratorAccessControlFilter is active
+2021-02-22 15:42:52.463  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-22 15:42:52.826  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 15:42:53.277  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : PayloadSizeFilter is active
+2021-02-22 15:42:54.694  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: ORCHESTRATOR
+2021-02-22 15:42:54.694  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: SECURED
+2021-02-22 15:42:54.789  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server CN: orchestrator.testcloud2.aitia.arrowhead.eu
+2021-02-22 15:42:55.153  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-22 15:42:55.354  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system ORCHESTRATOR published 1 service(s).
+2021-02-22 15:42:55.806  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.o.OrchestratorMain                 : Started OrchestratorMain in 10.495 seconds (JVM running for 11.402)

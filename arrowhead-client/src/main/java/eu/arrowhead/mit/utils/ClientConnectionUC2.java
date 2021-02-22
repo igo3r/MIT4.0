@@ -33,12 +33,13 @@ public class ClientConnectionUC2 {
 		} else {
 			scheme = CommonConstants.HTTPS;
 		}
-		UriComponents providerUri = Utilities.createURI(scheme, prop.getProperty(MITConstants.PROPERTY_C1_ADDRESS),
-				Integer.valueOf(prop.getProperty(MITConstants.PROPERTY_C1_PORT)),
-				prop.getProperty(MITConstants.PROPERTY_C1_PATH) + runs + "/" + currentRun);
+		System.out.println("Scheme in ClientConnection " + scheme);
+		UriComponents providerUri = Utilities.createURI(scheme, prop.getProperty(MITConstants.PROPERTY_C2_ADDRESS),
+				Integer.valueOf(prop.getProperty(MITConstants.PROPERTY_C2_PORT)),
+				prop.getProperty(MITConstants.PROPERTY_C2_PATH) +"/"+ runs + "/" + currentRun);
+		System.out.println("Providerui in Clientconnection " + providerUri);
 
 		retResult = httpService.sendRequest(providerUri, HttpMethod.GET, String.class);
-
 		return retResult;
 	}
 

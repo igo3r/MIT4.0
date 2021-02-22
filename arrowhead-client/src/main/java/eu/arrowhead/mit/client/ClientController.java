@@ -48,7 +48,7 @@ public class ClientController extends Thread {
 	private final AtomicBoolean running = new AtomicBoolean(false);
 
 	@Autowired
-	private ClientConnectionUC2 cc2;
+	private ClientConnectionUC2 cc;
 
 	ClientProperties cp = new ClientProperties();
 
@@ -83,11 +83,11 @@ public class ClientController extends Thread {
 	public void run() {
 		RunParams rp;
 		ResponseEntity<String> result = null;
-		String c1_path; 
+		String c2_path; 
 		while (running.get()) {
 			try {
 				Properties prop = cp.getProp();
-				c1_path = prop.getProperty(MITConstants.PROPERTY_C1_PATH);
+				c2_path = prop.getProperty(MITConstants.PROPERTY_C2_PATH);
 				do {
 					rp = runQueue.poll(5, TimeUnit.SECONDS);
 				} while (running.get() && Objects.isNull(rp));
@@ -108,8 +108,8 @@ public class ClientController extends Thread {
 							logger.info("");
 							logger.info("[Start - Inner: {}]", j);
 
-							if (c1_path != null) {
-								result = cc2.run(rp.innerLoop, j);
+							if (c2_path != null) {
+								result = cc.run(rp.innerLoop, j);
 							} else {
 								logger.info("There is no path in the application.properties file.");
 							}

@@ -3051,3 +3051,63 @@ Verify the connector's configuration, identify and stop any process that's liste
 2020-11-23 21:50:47.748  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
 2020-11-23 21:50:48.360  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.ApplicationInitListener            : Core system AUTHORIZATION published 4 service(s).
 2020-11-23 21:50:49.316  INFO LAPTOP-G2IO37NG --- [           main] e.a.c.a.AuthorizationMain                : Started AuthorizationMain in 9.948 seconds (JVM running for 10.922)
+2021-02-22 12:20:33.968  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : Starting AuthorizationMain on LAPTOP-VQ0I1IDC with PID 19624 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\UC2_GITHUB\MIT4.0\authorization)
+2021-02-22 12:20:33.985  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : No active profile set, falling back to default profiles: default
+2021-02-22 12:20:37.198  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : AuthAccessControlFilter is active
+2021-02-22 12:20:40.648  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-22 12:20:41.042  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 12:20:41.508  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : PayloadSizeFilter is active
+2021-02-22 12:20:43.133  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: AUTHORIZATION
+2021-02-22 12:20:43.134  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: SECURED
+2021-02-22 12:20:43.237  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server CN: authorization.testcloud2.aitia.arrowhead.eu
+2021-02-22 12:20:44.014  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-22 12:20:44.847  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system AUTHORIZATION published 4 service(s).
+2021-02-22 12:20:45.346  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : Started AuthorizationMain in 11.695 seconds (JVM running for 12.558)
+2021-02-22 12:29:06.204  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : Starting AuthorizationMain on LAPTOP-VQ0I1IDC with PID 12904 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\UC2_GITHUB\MIT4.0\authorization)
+2021-02-22 12:29:06.216  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : No active profile set, falling back to default profiles: default
+2021-02-22 12:29:10.046  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : AuthAccessControlFilter is active
+2021-02-22 12:29:13.731  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-22 12:29:14.119  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 12:29:14.621  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : PayloadSizeFilter is active
+2021-02-22 12:29:16.156  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: AUTHORIZATION
+2021-02-22 12:29:16.156  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: SECURED
+2021-02-22 12:29:16.371  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server CN: authorization.testcloud2.aitia.arrowhead.eu
+2021-02-22 12:29:17.137  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-22 12:29:18.156  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system AUTHORIZATION published 4 service(s).
+2021-02-22 12:29:18.674  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : Started AuthorizationMain in 12.866 seconds (JVM running for 14.037)
+2021-02-22 12:50:54.264  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : Starting AuthorizationMain on LAPTOP-VQ0I1IDC with PID 15896 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\UC2_GITHUB\MIT4.0\authorization)
+2021-02-22 12:50:54.282  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : No active profile set, falling back to default profiles: default
+2021-02-22 12:50:57.966  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : AuthAccessControlFilter is active
+2021-02-22 12:51:01.664  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-22 12:51:02.029  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 12:51:02.525  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : PayloadSizeFilter is active
+2021-02-22 12:51:04.089  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: AUTHORIZATION
+2021-02-22 12:51:04.090  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: SECURED
+2021-02-22 12:51:04.218  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server CN: authorization.testcloud2.aitia.arrowhead.eu
+2021-02-22 12:51:04.890  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-22 12:51:05.744  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system AUTHORIZATION published 4 service(s).
+2021-02-22 12:51:06.229  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : Started AuthorizationMain in 12.361 seconds (JVM running for 13.533)
+2021-02-22 12:54:47.281  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : Starting AuthorizationMain on LAPTOP-VQ0I1IDC with PID 9088 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\UC2_GITHUB\MIT4.0\authorization)
+2021-02-22 12:54:47.292  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : No active profile set, falling back to default profiles: default
+2021-02-22 12:54:51.348  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : AuthAccessControlFilter is active
+2021-02-22 12:54:54.978  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-22 12:54:55.375  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 12:54:55.864  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : PayloadSizeFilter is active
+2021-02-22 12:54:57.377  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: AUTHORIZATION
+2021-02-22 12:54:57.378  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: SECURED
+2021-02-22 12:54:57.463  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server CN: authorization.testcloud2.aitia.arrowhead.eu
+2021-02-22 12:54:58.098  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-22 12:54:58.933  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system AUTHORIZATION published 4 service(s).
+2021-02-22 12:54:59.398  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : Started AuthorizationMain in 12.485 seconds (JVM running for 13.588)
+2021-02-22 15:42:10.272  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : Starting AuthorizationMain on LAPTOP-VQ0I1IDC with PID 11084 (started by pbach in C:\Users\pbach\OneDrive - Fachhochschule Burgenland GmbH\arbeit\MiT\CleanCode\UC2_GITHUB\MIT4.0\authorization)
+2021-02-22 15:42:10.280  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : No active profile set, falling back to default profiles: default
+2021-02-22 15:42:13.640  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : AuthAccessControlFilter is active
+2021-02-22 15:42:17.355  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.q.u.UriCrawlerTaskConfig           : URI Crawler task scheduled.
+2021-02-22 15:42:17.833  WARN LAPTOP-VQ0I1IDC --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 15:42:18.482  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.f.ArrowheadFilter                  : PayloadSizeFilter is active
+2021-02-22 15:42:20.429  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system name: AUTHORIZATION
+2021-02-22 15:42:20.431  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server mode: SECURED
+2021-02-22 15:42:20.547  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Server CN: authorization.testcloud2.aitia.arrowhead.eu
+2021-02-22 15:42:21.150  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Service Registry is accessible...
+2021-02-22 15:42:21.724  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.ApplicationInitListener            : Core system AUTHORIZATION published 4 service(s).
+2021-02-22 15:42:22.288  INFO LAPTOP-VQ0I1IDC --- [           main] e.a.c.a.AuthorizationMain                : Started AuthorizationMain in 12.326 seconds (JVM running for 13.27)
