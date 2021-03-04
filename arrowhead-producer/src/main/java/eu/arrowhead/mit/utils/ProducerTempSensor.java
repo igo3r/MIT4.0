@@ -7,7 +7,7 @@ import java.io.IOException;
 public class ProducerTempSensor {
 public double getTempFromSensor() throws IOException {
 		// Raspberrycode
-		FileReader fr = new FileReader("/home/pi/C2/LogTemp.csv");
+		FileReader fr = new FileReader("/home/pi/arrowhead/producer/PiLoggerTempValue/LogTemp.csv");
 		BufferedReader br = new BufferedReader(fr); 		
 		String line1 = br.readLine(); 
 		return Double.parseDouble(line1); 
