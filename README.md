@@ -132,8 +132,8 @@ Pinpoint is an open source APM tool used to measure the performance of large dis
 | PiLogger One Webmonitor |  | X | 0v10 Beta | [Download Software](https://www.pilogger.de/index.php/de/download-de/category/2-software), [Download Installation Description](https://www.pilogger.de/index.php/de/download-de/category/3-documentation)|
 | Arrowhead Framework |  | X | 4.1.3 | [Download](https://github.com/arrowhead-f/core-java-spring) |
 | Java Version |  | X | tbd | [Download]() |
-| PinPoint APM  |  | X | tbd | [Download]() |
-| XAMPP Control Panel | | X | tbd | tbd |
+| PinPoint APM  |  | X | tbd | [Download](https://github.com/pinpoint-apm/pinpoint/blob/master/doc/installation.md) |
+| XAMPP Control Panel | | X | 3.2.4 | [Download](https://www.apachefriends.org/de/download.html) |
 
 It should be noted that we have built and tested the various use cases with these versions, so there may be problems when using older or newer versions. 
 
@@ -156,7 +156,7 @@ As already mentioned, the communication protocol HTTP as well as HTTPS can be us
 | Service Registry System | 2245 | 2255 |
 | Database | 3306 | 3306 |
 | PiLogger One Webmonitor | 8080 | 8080 |
-| Pinpoint APM | tbd | tbd |
+| Pinpoint APM | 1234 | 1234 |
 
 Each branch description provides a figure, including C1, C2 and Arrowhead with the core systems. The figures show the procedure of the CPS and illustrate the individual ip-addresses and the associated ports for each component, like described in the table above. 
 
