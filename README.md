@@ -177,7 +177,7 @@ In this section a Class Diagram is shown, which indicates how the Controller Cla
 ![Table orechstrator_store](/images/tableorchestratorstore_UC3.PNG)
 
 
-10. Now it should work. To test it enter 127.0.0.1:2248 (C0) in the URL line of the browser to get to the Swagger of the **Arrowhead Client Core System**. 
+10. Now it should work. To test it enter 127.0.0.1:2258 (C0) in the URL line of the browser to get to the Swagger of the **Arrowhead Client Core System**. 
 
 ![Arrowhead Client Core System](/images/client.png)
 
