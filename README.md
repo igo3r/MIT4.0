@@ -197,7 +197,7 @@ Attention: in this Branch HTTPS is used. Therefore you have to add https:// in f
 
 8. Now it should work. To test it enter 127.0.0.1:2248 (C0) in the URL line of the browser to get to the Swagger of the **Arrowhead Client Core System**. 
 
-![Arrowhead Client Core System](/images/clientHTTPS.png)
+![Arrowhead Client Core System](/images/clientHTTPS.PNG)
 
 9. Make the runs using Arrowhead Client Core System API. To do this, click on the *All* tab and go to the second method called **run**. This will start the workload balancer. Important to note is the following: 
    1. innerLoops: this number specifies how many measurements should be taken. It must be an even number, as half of the numbers are below and half are above the defined limit. A maximum of 1000 measurements can be performed. 
