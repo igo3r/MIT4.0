@@ -152,7 +152,7 @@ In this section a Class Diagram is shown, which indicates how the Controller Cla
    ![Swagger Service Registry](/images/swaggersr.png)
 
 
-7. Now it should similar to the pictures below. The Systems should be registered in Table *system_* (first picture) and the Services in Table *service_registry* (second picture). At this stage C1 and C2 are not able to communicate with each other. 
+8. Now it should similar to the pictures below. The Systems should be registered in Table *system_* (first picture) and the Services in Table *service_registry* (second picture). At this stage C1 and C2 are not able to communicate with each other. 
 
 ![Table system_](/images/tablesystemUC3.PNG)
 
@@ -161,7 +161,7 @@ In this section a Class Diagram is shown, which indicates how the Controller Cla
 
 ![Table service_definition](/images/tableservicedefinition_UC3.PNG)
 
-8. After all systems are started successfully go back to script folder. 
+9. After all systems are started successfully go back to script folder. 
    1. Copy content from file *database_dependencies.sql*
    2. Paste the content into the SQL Query field and execute
    3. Following table will be updated, like shown in the figures below: 
@@ -177,11 +177,11 @@ In this section a Class Diagram is shown, which indicates how the Controller Cla
 ![Table orechstrator_store](/images/tableorchestratorstore_UC3.PNG)
 
 
-8. Now it should work. To test it enter 127.0.0.1:2248 (C0) in the URL line of the browser to get to the Swagger of the **Arrowhead Client Core System**. 
+10. Now it should work. To test it enter 127.0.0.1:2248 (C0) in the URL line of the browser to get to the Swagger of the **Arrowhead Client Core System**. 
 
 ![Arrowhead Client Core System](/images/client.png)
 
-9. Make the runs using Arrowhead Client Core System API. To do this, click on the *All* tab and go to the second method called **run**. This will start the workload balancer. Important to note is the following: 
+11. Make the runs using Arrowhead Client Core System API. To do this, click on the *All* tab and go to the second method called **run**. This will start the workload balancer. Important to note is the following: 
    1. innerLoops: this number specifies how many measurements should be taken. It must be an even number, as half of the numbers are below and half are above the defined limit. A maximum of 1000 measurements can be performed. 
    2. innerTimeout: this number specifies how many milliseconds there should be a pause between the measurements. If you want to pause for one second, enter 1000. 
    3. outerLoop: this number indicates how many test runs are to be made. For each test run, the specified number of InnerLoops will be measured. If you enter 10 here and 20 for InnerLoop, then 10 times 20 measurements are carried out. 
@@ -259,7 +259,7 @@ Create the following folder structure for C2 (arrowhead-producer):
 
 ### Application.properties Files
 
-Fill the application.properties File with content. This means to add database connection, server address, ports and information like certificates, for the HTTPS connection. 
+Fill the application.properties File with content. This means to add database connection, server address and ports. 
 
 application.properties File C0: 
 
