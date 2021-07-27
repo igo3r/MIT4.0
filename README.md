@@ -949,14 +949,14 @@ NOTE: The ClientApplicationInitListener.java and the AuthSwaggerConfig.java  wer
 
 Previous the properties of C1 and C2 were added to the MITConstants.java Class. In this step these systems and their services are included to Arrowhead Source Code as follow: 
 
-Go to *arrowhead-core-common/src/main/java/eu/arrowhead/common/core/CoreSystem.java* and add following lines after **ORCHESTRATION_SERVICE*** (Line 21):
+Go to *arrowhead-core-common/src/main/java/eu/arrowhead/common/core/CoreSystemService.java* and add following lines after **ORCHESTRATION_SERVICE*** (Line 21):
 
 ```
 CONSUMER_CLTC_ARRAY_SINGLE_SERVICE(MITConstants.MIT_SERVICE_CLTC_ARRAY_SINGLE, MITConstants.MIT_CONSUMER_URI + MITConstants.MIT_CONSUMER_CLTC_ARRAY_SINGLE_URI),
 PRODUCER_GET_ARRAY_SERVICE(MITConstants.MIT_PRODUCER_SERVICE_GET_ARRAY, MITConstants.MIT_PRODUCER_URI + MITConstants.MIT_PRODUCER_GET_ARRAY_URI_CONNECTION);
 ```
 
-Go to *arrowhead-core-common/src/main/java/eu/arrowhead/common/core/CoreSystemService.java* and add following lines at the beginning before SERVICE_REGISTRY:
+Go to *arrowhead-core-common/src/main/java/eu/arrowhead/common/core/CoreSystem.java* and add following lines at the beginning before SERVICE_REGISTRY:
 
 ```
 CONSUMER(MITConstants.MIT_DEFAULT_CONSUMER_PORT, List.of(CoreSystemService.CONSUMER_CLTC_ARRAY_SINGLE_SERVICE)),
