@@ -1,6 +1,6 @@
 # Use Case 3 
 
-In this file the Use Case 3 is described. Use Case 3 is implemented with the procedure of Scenario 1 and is considered for the local execution on one device. It used the protocol HTTP, which means communication between the components of the CPS is not secure. 
+In this file the Use Case 3 is described. Use Case 3 is implemented with the procedure of Scenario 1 and is considered for the local execution on one device. It uses the protocol HTTP, which means communication between the components of the CPS is not secure. 
 
 ## Table of Contents
 
