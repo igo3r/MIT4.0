@@ -229,7 +229,7 @@ Create a new Maven Module Project for each of the component. This section will d
 To add such a project click on File --> New --> Project --> Select Maven Module like shown in the picture below. 
 
 
-![Add new Maven Module Project](/images/mavenmuodule.PNG)
+![Add new Maven Module Project](/images/mavenmodule.PNG)
 
 In the next step the name of the module and the parent project must be selected. The name is *arrowhead-consumer*. 
 
