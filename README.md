@@ -195,7 +195,7 @@ Attention: in this Branch HTTPS is used. Therefore you have to add https:// in f
 ![Table orechstrator_store](/images/tableorchestratorstore_UC1.PNG)
 
 
-8. Now it should work. To test it enter 127.0.0.1:2248 (C0) in the URL line of the browser to get to the Swagger of the **Arrowhead Client Core System**. 
+8. Now it should work. To test it enter https://127.0.0.1:2248 (C0) in the URL line of the browser to get to the Swagger of the **Arrowhead Client Core System**. 
 
 ![Arrowhead Client Core System](/images/clientHTTPS.PNG)
 
