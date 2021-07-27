@@ -1,6 +1,6 @@
 # Use Case 2
 
-In this file the Use Case 2 is described. Use Case 2 is implemented with the procedure of Scenario 2 and is considered for the local execution on one device. It used the protocol HTTPS, which means secure communication is possible between the components of the CPS. 
+In this file the Use Case 2 is described. Use Case 2 is implemented with the procedure of Scenario 2 and is considered for the local execution on one device. It uses the protocol HTTPS, which means secure communication is possible between the components of the CPS. 
 
 ## Table of Contents
 
