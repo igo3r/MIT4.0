@@ -75,7 +75,7 @@ The sequence diagram below shows a more detailed procedure, by showing which ser
 
 As mentioned in the previous section, C0 is used to start the runs. C0 is a workload balancer to ensure that all use cases can be compared with each other in a controlled way. The workload balancer is used to define runs, which specify how many measurements should be taken per run. As MIT 4.0 is used to explore security and performance, this allows both aspects to be analysed. 
 
-To measure Use Case 2, the workload must first be defined and executed. The workload controller connects to C1 and send a request to the orchestration system, as shown in step 1 of the first figure. The rest of the process can be found in the section [Architecture](#architecture). 
+To measure Use Case 2, the workload must first be defined and executed. The workload controller connects to C2 and send a request to the orchestration system, as shown in step 1 of the first figure. The rest of the process can be found in the section [Architecture](#architecture). 
 
 <a name="maven" />
 
