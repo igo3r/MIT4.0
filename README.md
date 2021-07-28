@@ -113,7 +113,7 @@ In this section a Class Diagram is shown, which indicates how the Controller Cla
 
 ### How to start 
 
-1. Clone branch from Githab 
+1. Clone branch from Github 
 
 `` git clone --branch UseCase1 https://github.com/igo3r/MIT4.0.git ``
 
@@ -466,7 +466,7 @@ public interface MITConstants {
 
 ### Add Functionality to C1 
 
-To be able to fulfil a task C1 requires a functionality, as C1 should simulate an air condition system. Therefore following classes are required: 
+To be able to fulfill a task C1 requires a functionality, as C1 should simulate an air condition system. Therefore following classes are required: 
 
 ![Overview classes consumer](/images/consumerclasses.PNG)
 
@@ -610,7 +610,7 @@ NOTE: The ConsumerApplicationInitListener.java, the AuthSwaggerConfig.java and t
 
 ### Add Functionality to C2
 
-To be able to fulfil a task C2 requires a functionality, as C2 should simulate a temperature sensor to measure the physical environment. Therefore following classes are required: 
+To be able to fulfill a task C2 requires a functionality, as C2 should simulate a temperature sensor to measure the physical environment. Therefore following classes are required: 
 
 ![Overview classes producer](/images/producerclasses.PNG)
 
