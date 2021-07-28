@@ -127,13 +127,15 @@ Pinpoint is an open source APM tool used to measure the performance of large dis
 | Technology | Hardware | Software | Version | Link |
 | ---------- | -------- | -------- | ------- | ---- |
 | Raspberry Pi | X  |  | Model 3 B + | [Purchase](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/) |
-| Raspberry Pi OS Lite |  | X | tbd | [Download](https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit) |
+| Raspberry Pi OS Lite |  | X | Rasbian Buster 10 Lite OS | [Download](https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit) |
 | PiLogger One | X |  | 1.0 | [Purchase](https://www.pilogger.eu/) |
 | PiLogger One Webmonitor |  | X | 0v10 Beta | [Download Software](https://www.pilogger.de/index.php/de/download-de/category/2-software), [Download Installation Description](https://www.pilogger.de/index.php/de/download-de/category/3-documentation)|
 | Arrowhead Framework |  | X | 4.1.3 | [Download](https://github.com/arrowhead-f/core-java-spring) |
-| Java Version |  | X | tbd | [Download]() |
-| PinPoint APM  |  | X | tbd | [Download](https://github.com/pinpoint-apm/pinpoint/blob/master/doc/installation.md) |
+| Java Version |  | X | 11.0.9.1 | [Download](https://centos.pkgs.org/7/centos-updates-x86_64/java-11-openjdk-11.0.9.11-2.el7_9.x86_64.rpm.html) |
+| PinPoint APM  |  | X | 1.8.5 | [Download](https://github.com/pinpoint-apm/pinpoint/blob/master/doc/installation.md) |
 | XAMPP Control Panel | | X | 3.2.4 | [Download](https://www.apachefriends.org/de/download.html) |
+| Router | x| | e.g. Ubiquiti Networks ES-8-150W EdgeSwitch | [Purchase](https://www.amazon.de/Ubiquiti-Networks-ES-8-150W-EdgeSwitch-8-150W-Schwarz/dp/B01JP7EQI0) |
+| BalenaEtcher |  | X | v1.5.121 | [Download](https://www.balena.io/etcher/) |
 
 It should be noted that we have built and tested the various use cases with these versions, so there may be problems when using older or newer versions. 
 
@@ -369,7 +371,7 @@ This branch provides the implementation of the final prototype of this project, 
 
 ### How to start
 
-1. Clone branch from Githab 
+1. Clone branch from Github 
 
 `` git clone https://github.com/igo3r/MIT4.0.git ``
 
