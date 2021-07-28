@@ -136,6 +136,7 @@ Pinpoint is an open source APM tool used to measure the performance of large dis
 | XAMPP Control Panel | | X | 3.2.4 | [Download](https://www.apachefriends.org/de/download.html) |
 | Router | x| | e.g. Ubiquiti Networks ES-8-150W EdgeSwitch | [Purchase](https://www.amazon.de/Ubiquiti-Networks-ES-8-150W-EdgeSwitch-8-150W-Schwarz/dp/B01JP7EQI0) |
 | BalenaEtcher |  | X | v1.5.121 | [Download](https://www.balena.io/etcher/) |
+| WinSCP |  | X | v5.17.9 | [Download](https://winscp.net/eng/download.php) |
 
 It should be noted that we have built and tested the various use cases with these versions, so there may be problems when using older or newer versions. 
 
