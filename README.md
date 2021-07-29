@@ -400,7 +400,7 @@ The URL for this is build as followed: /client/run/{outerLoop}/{outerTimeout}/{i
 
 Following the results of a test run is shown by taking /client/run/2/1/6/1. First the input is shown and afterwards the result. 
 
-![Swagger Client Test run](/images/testrunclient_UC2.PNG)
+![Swagger Client Test run](/images/testrunclient_final.PNG)
 
 ![Result of Test run](/images/outputtestruns.png)
 
