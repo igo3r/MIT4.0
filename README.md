@@ -371,12 +371,12 @@ Attention: in this Branch HTTPS is used. Therefore you have to add https:// in f
 ![Table service_definition](/images/tableservice_definition.PNG)
 
 10. After all systems are started successfully go back to script folder. 
-   1. Copy content from file *database_dependencies.sql*
-   2. Paste the content into the SQL Query field and execute
-   3. Following table will be updated, like shown in the figures below: 
-      *  authorization_intra_cloud
-      *  authorization_intra_cloud_interface_connection
-      *  orechstrator_store
+    1. Copy content from file *database_dependencies.sql*
+    2. Paste the content into the SQL Query field and execute
+    3. Following table will be updated, like shown in the figures below: 
+       *  authorization_intra_cloud
+       *  authorization_intra_cloud_interface_connection
+       *  orechstrator_store
 
 ![Table authorization_intra_cloud](/images/tableauthorization_intra_cloud.PNG)
 
@@ -391,10 +391,10 @@ Attention: in this Branch HTTPS is used. Therefore you have to add https:// in f
 ![Arrowhead Client Core System](/images/clientfinal.PNG)
 
 12. Make the runs using Arrowhead Client Core System API. To do this, click on the *All* tab and go to the second method called **run**. This will start the workload balancer. Important to note is the following: 
-   1. innerLoops: this number specifies how many measurements should be taken. It must be an even number, as half of the numbers are below and half are above the defined limit. A maximum of 1000 measurements can be performed. 
-   2. innerTimeout: this number specifies how many milliseconds there should be a pause between the measurements. If you want to pause for one second, enter 1000. 
-   3. outerLoop: this number indicates how many test runs are to be made. For each test run, the specified number of InnerLoops will be measured. If you enter 10 here and 20 for InnerLoop, then 10 times 20 measurements are carried out. 
-   4. outerTimeout: this number specifies how many milliseconds there should be between outer loops. If you want to pause for one second, enter 1000. 
+    1. innerLoops: this number specifies how many measurements should be taken. It must be an even number, as half of the numbers are below and half are above the defined limit. A maximum of 1000 measurements can be performed. 
+    2. innerTimeout: this number specifies how many milliseconds there should be a pause between the measurements. If you want to pause for one second, enter 1000. 
+    3. outerLoop: this number indicates how many test runs are to be made. For each test run, the specified number of InnerLoops will be measured. If you enter 10 here and 20 for InnerLoop, then 10 times 20 measurements are carried out. 
+    4. outerTimeout: this number specifies how many milliseconds there should be between outer loops. If you want to pause for one second, enter 1000. 
 
 The URL for this is build as followed: /client/run/{outerLoop}/{outerTimeout}/{innerLoop}/{innerTimeout}
 
