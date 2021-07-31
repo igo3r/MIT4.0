@@ -57,7 +57,7 @@ In this section the used Hardware and Software is described to get an overview a
 
 ### Raspberry Pi
 
-Used Version Image: TBD 
+Used Version Image: Rasbian Buster 10 Lite OS 
 
 For the components of the CPS Raspberry Pi 3 Model B+ were used. With this model it is possible to use the PiLogger One for power consumption measurements. To minimise the influence of unnecessary services, in order not to influence the measurements too much, the Lite image of Raspbian was used. Alternatively, the desktop version could be used if a GUI is preferred. For both scenarios, however, the GUI loose Lite Image is sufficient, since the components only have to be started via it. 
 
