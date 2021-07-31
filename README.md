@@ -392,7 +392,7 @@ This branch provides the implementation of the final prototype of this project, 
 5. Create Empty Arrowhead Database
    1. Click on SQL to enter Queries 
    2. Go to script folder of the Github Project 
-   3. Copy content from file *create_empty_arrowhead_db.sql*
+   3. Copy content from file [*create_empty_arrowhead_db.sql*](https://github.com/igo3r/MIT4.0/blob/main/scripts/create_empty_arrowhead_db.sql)
    4. Paste the content into the SQL Query field and execute 
    5. It should look similar to the picture below
 
@@ -400,11 +400,11 @@ This branch provides the implementation of the final prototype of this project, 
 
 6. Start Components of the project. Attention, please follow the noted sequence: 
    1. ServiceRegistryMain.java <br>
-      Location: arrowhead-serviceregistry/src/main/java/eu/arrowhead/core/serviceregistry/ServiceRegistryMain.java
+      Location: [arrowhead-serviceregistry/src/main/java/eu/arrowhead/core/serviceregistry/ServiceRegistryMain.java](https://github.com/igo3r/MIT4.0/blob/main/serviceregistry/src/main/java/eu/arrowhead/core/serviceregistry/ServiceRegistryMain.java)
    3. AuthorizationMain.java <br>
-      Location: arrowhead-authorization/src/main/java/eu/arrowhead/core/authorization/AuthorizationMain.java
+      Location: [arrowhead-authorization/src/main/java/eu/arrowhead/core/authorization/AuthorizationMain.java](https://github.com/igo3r/MIT4.0/blob/main/authorization/src/main/java/eu/arrowhead/core/authorization/AuthorizationMain.java)
    5. OrchestratorMain.java <br>
-      Location: arrowhead-orchestrator/src/main/java/eu/arrowhead/core/orchestrator/OrchestratorMain.java
+      Location: [arrowhead-orchestrator/src/main/java/eu/arrowhead/core/orchestrator/OrchestratorMain.java](https://github.com/igo3r/MIT4.0/blob/main/orchestrator/src/main/java/eu/arrowhead/core/orchestrator/OrchestratorMain.java)
 
 ![Successful start AuthorizationMain.java](/images/successfulstartHTTPS.PNG)
 
@@ -428,7 +428,7 @@ Attention: in this Branch HTTPS is used. Therefore you have to add https:// in f
    
    ![Import Certificate](/images/importcertificate.PNG)
    
-   Then click on Import and browse to the location where the cloned Github project is located. Then go to the cerficate folder in src/main/ressources and import the certificate. Afterwards you can enter the URL again and the browser will ask which certificate to use, like shown on the picture below. 
+   Then click on Import and browse to the location where the cloned Github project is located. Then go to the cerficate folder in [src/main/ressources](https://github.com/igo3r/MIT4.0/tree/main/serviceregistry/src/main/resources) and import the certificate. Afterwards you can enter the URL again and the browser will ask which certificate to use, like shown on the picture below. 
    
    ![Select Certificate](/images/importcertificate2.PNG)
    
