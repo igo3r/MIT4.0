@@ -275,6 +275,7 @@ Initially, the image Rasbian Buster 10 Lite OS (without GUI) was loaded from ([L
    	sudo apt update
 	sudo apt install default-jdk -y
   8. Install Pinpoint. Instructions can be found [here](https://github.com/pinpoint-apm/pinpoint/blob/master/doc/installation.md). It is recommended to name the PinPoint agents with the system names. 
+  9. Install the script for the Sem Voltcraft Power Plug to control the light bulb. Instructions can be found [here](https://github.com/Heckie75/voltcraft-sem-6000).
 
 
 <a name="start" />
@@ -959,6 +960,8 @@ public class ConsumerAirCondition {
 	}
 }
 ```
+
+The commands ```Runtime.getRuntime().exec("/home/pi/PowerPlug/sem-6000.exp AC --on");``` and  ```Runtime.getRuntime().exec("/home/pi/PowerPlug/sem-6000.exp AC --off");``` are to control the light bulb in the final prototype. These commands "inform" the Power Plug about switching on and off. If the Power Plug is on the light bulb is on and vice versa.
 
 NOTE: The ConsumerApplicationInitListener.java, the AuthSwaggerConfig.java and the ConsumerConnection.java were taken over and adapted from the Arrowhead Source Code. 
 
