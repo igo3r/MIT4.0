@@ -252,7 +252,8 @@ In the first prototype **Leni 1.0**, the air condition was also simulated and th
 | ---------- | ------ | ---- |
 | Raspberry Pi | Model 3 B + | [Purchase](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/) |
 | PiLogger One |  1.0 | [Purchase](https://www.pilogger.eu/) |
-| Router |  e.g. Ubiquiti Networks ES-8-150W EdgeSwitch | [Purchase](https://www.amazon.de/Ubiquiti-Networks-ES-8-150W-EdgeSwitch-8-150W-Schwarz/dp/B01JP7EQI0)
+| Router |  e.g. Ubiquiti Networks ES-8-150W EdgeSwitch | [Purchase](https://www.amazon.de/Ubiquiti-Networks-ES-8-150W-EdgeSwitch-8-150W-Schwarz/dp/B01JP7EQI0) |
+| Sem Voltcraft Power Plugs | Sem 6000 | [Purchase](https://www.conrad.at/de/p/voltcraft-sem6000-energiekosten-messgeraet-bluetooth-schnittstelle-datenexport-datenloggerfunktion-trms-stromtarif-e-1558906.html) |
 
 We used six Rapsberry Pis for the three Arrowhead Core Systems, C1 and C2. For this five Raspberry Pis PiLogger are required for the power consumption measurements. Further C1 uses the PiLogger to integrate a temperature sensor. 
 The sixth Rapsberry Pi is the database, whereby this can alternatively be run on the laptop with C0 or virtualised, for example as a VM. If the laptop is used with C0, the IP address must be changed in the application.properties files. Since the power consumption was not important for us, the database does not have to be equipped with a PiLogger, but of course this can be done. 
@@ -298,7 +299,7 @@ Initially, the image Rasbian Buster 10 Lite OS (without GUI) was loaded from ([L
 5. Create Empty Arrowhead Database
    1. Click on SQL to enter Queries 
    2. Go to script folder of the Github Project 
-   3. Copy content from file *create_empty_arrowhead_db.sql*
+   3. Copy content from file [*create_empty_arrowhead_db.sql*](https://github.com/igo3r/MIT4.0/blob/final_prototype/scripts/create_empty_arrowhead_db.sql)
    4. Paste the content into the SQL Query field and execute 
    5. It should look similar to the picture below
 
@@ -316,7 +317,7 @@ This command causes a target folder to be created in all modules in which, among
 
 ![Target Folder in Service Registry Module](/images/srtarget.PNG)
 
-. This jar file now needs to be transferred to the Raspberry Pi. To do this, a remote connection can be set up via the development environment or programs such as WINSCP (download) can be used. For WinSCP a connection must be established, and afterwards the files can be moved with drag and drop from local environment to Rapsberry Pi. ATTENTION: Move the correct jar-file to the correct Rapsberry, e.g. Consumer jar-file needs to be transferred to 10.20.30.1 (see pictures below). 
+This jar file now needs to be transferred to the Raspberry Pi. To do this, a remote connection can be set up via the development environment or programs such as WINSCP (download) can be used. For WinSCP a connection must be established, and afterwards the files can be moved with drag and drop from local environment to Rapsberry Pi. ATTENTION: Move the correct jar-file to the correct Rapsberry, e.g. Consumer jar-file needs to be transferred to 10.20.30.1 (see pictures below). 
 
 
 ![Establish Connection WinSCP to Consumer (10.20.30.1)](/images/winscp1.PNG)
@@ -361,7 +362,7 @@ Attention: in this Branch HTTPS is used. Therefore you have to add https:// in f
    ![Swagger Service Registry](/images/serviceregistryswaggerhttps_final.PNG)
 
 
-9. Now it should similar to the pictures below. The Systems should be registered in Table *system_* (first picture) and the Services in Table *service_registry* (second picture). At this stage C1 and C2 are not able to communicate with each other. 
+9. Now it should similar to the pictures below. The Systems should be registered in Table *system_* (first picture) and the Services in Table *service_registry* (second picture). At this stage C1 and C2 are not able to communicate with each other. This entrys are created after starting the systems.
 
 ![Table system_](/images/tablesystem_.PNG)
 
@@ -371,19 +372,33 @@ Attention: in this Branch HTTPS is used. Therefore you have to add https:// in f
 ![Table service_definition](/images/tableservice_definition.PNG)
 
 10. After all systems are started successfully go back to script folder. 
-    1. Copy content from file *database_dependencies.sql*
+    1. Copy content from file [*database_dependencies.sql*](https://github.com/igo3r/MIT4.0/blob/final_prototype/scripts/database_dependencies.sql)
     2. Paste the content into the SQL Query field and execute
     3. Following table will be updated, like shown in the figures below: 
+       *  orechstrator_store
        *  authorization_intra_cloud
        *  authorization_intra_cloud_interface_connection
-       *  orechstrator_store
+       
+```INSERT INTO `orchestrator_store` (`id`, `consumer_system_id`, `provider_system_id`, `foreign_`, `service_id`, `service_interface_id`, `priority`, `attribute`, `created_at`, `updated_at`) VALUES (NULL, '4', '3', '0', '6', '1', '1', NULL, UTC_TIMESTAMP(), UTC_TIMESTAMP());```
+
+```INSERT INTO `orchestrator_store` (`id`, `consumer_system_id`, `provider_system_id`, `foreign_`, `service_id`, `service_interface_id`, `priority`, `attribute`, `created_at`, `updated_at`) VALUES (NULL, '4', '3', '0', '7', '1', '1', NULL, UTC_TIMESTAMP(), UTC_TIMESTAMP());```
+
+![Table orechstrator_store](/images/tableorchestrator_store.PNG)
+
+```INSERT INTO `authorization_intra_cloud` (`id`, `created_at`, `updated_at`, `consumer_system_id`, `provider_system_id`, `service_id`) VALUES (NULL, UTC_TIMESTAMP(), UTC_TIMESTAMP(), '4', '3', '6'); ```
+
+```INSERT INTO `authorization_intra_cloud` (`id`, `created_at`, `updated_at`, `consumer_system_id`, `provider_system_id`, `service_id`) VALUES (NULL, UTC_TIMESTAMP(), UTC_TIMESTAMP(), '4', '3', '7'); ```
 
 ![Table authorization_intra_cloud](/images/tableauthorization_intra_cloud.PNG)
+
+```INSERT INTO `authorization_intra_cloud_interface_connection` (`id`, `authorization_intra_cloud_id`, `interface_id`, `created_at`, `updated_at`) VALUES (NULL, '1', '1', UTC_TIMESTAMP(), UTC_TIMESTAMP());```
+
+```INSERT INTO `authorization_intra_cloud_interface_connection` (`id`, `authorization_intra_cloud_id`, `interface_id`, `created_at`, `updated_at`) VALUES (NULL, '2', '1', UTC_TIMESTAMP(), UTC_TIMESTAMP());```
 
 ![Table authorization_intra_cloud_interface_connection](/images/tableauthorization_intra_cloud_interface_connection.PNG)
 
 
-![Table orechstrator_store](/images/tableorchestrator_store.PNG)
+
 
 
 11. Now it should work. To test it enter https://10.20.30.23:1239 (C0) in the URL line of the browser to get to the Swagger of the **Arrowhead Client Core System**. 
@@ -411,7 +426,7 @@ Following the results of a test run is shown by taking /client/run/2/1/6/1. Firs
 
 In this files the difference to the other branches is obvious, as all ip adresses are different. 
 
-Service Registry System - application.properties file: 
+[Service Registry System - application.properties file](https://github.com/igo3r/MIT4.0/blob/final_prototype/serviceregistry/src/main/resources/application.properties): 
 
 ```
 spring.datasource.url=jdbc:mysql://10.20.30.6:3306/arrowhead?serverTimezone=Europe/Vienna  
@@ -443,7 +458,7 @@ server.ssl.trust-store=classpath:certificates/truststore.p12
 server.ssl.trust-store-password=123456
 ```
 
-Authorisation System - application.properties file: 
+[Authorisation System - application.properties file](https://github.com/igo3r/MIT4.0/blob/final_prototype/authorization/src/main/resources/application.properties): 
 
 ```
 spring.datasource.url=jdbc:mysql://10.20.30.6:3306/arrowhead?serverTimezone=Europe/Vienna  
@@ -478,7 +493,7 @@ server.ssl.trust-store=classpath:certificates/truststore.p12
 server.ssl.trust-store-password=123456
 ```
 
-Orchestration System - application.properties file: 
+[Orchestration System - application.properties file](https://github.com/igo3r/MIT4.0/blob/final_prototype/orchestrator/src/main/resources/application.properties): 
 
 ```
 ############################################
@@ -586,7 +601,7 @@ Create the following folder structure for C2 (arrowhead-producer):
 
 Fill the application.properties File with content. This means to add database connection, server address, ports and information like certificates, for the HTTPS connection. 
 
-application.properties File C0: 
+[application.properties File C0](https://github.com/igo3r/MIT4.0/blob/final_prototype/arrowhead-client/src/main/resources/application.properties): 
 
 ```
 spring.datasource.url=jdbc:mysql://10.20.30.6:3306/arrowhead?serverTimezone=Europe/Vienna  
@@ -625,7 +640,7 @@ server.ssl.trust-store-password=123456
 In the C0 file it is important to give information about the endpoint of the system, which starts the request. In this case C2 is measuring the temperature and check if it is above a limit, if yes, C2 send the value to C1. Therefore, C0 needs to know to start with C2. 
 
 
-application.properties File C1: 
+[application.properties File C1](https://github.com/igo3r/MIT4.0/blob/final_prototype/arrowhead-consumer/src/main/resources/application.properties): 
 
 ```
 spring.datasource.url=jdbc:mysql://10.20.30.6:3306/arrowhead?serverTimezone=Europe/Vienna  
@@ -657,7 +672,7 @@ server.ssl.trust-store-password=123456
 ```
  C1 do not need an end, it just has to know where to find the Service Registry to register.
 
-application.properties File C2: 
+[application.properties File C2](https://github.com/igo3r/MIT4.0/blob/final_prototype/arrowhead-producer/src/main/resources/application.properties): 
 
 ```
 spring.datasource.url=jdbc:mysql://10.20.30.6:3306/arrowhead?serverTimezone=Europe/Vienna  
@@ -701,11 +716,11 @@ C2 measures the temperature and send this value to C1, if necessary. Therefore t
 
 ### Add Constants for Components to Arrowhead Source Code
 
-To be able to connect to Arrowhead, the information about the systems has to be added to the code. The properties for Service Registry, Authrization System and Orchestrator System can be found in *arrowhead-core-common/src/main/java/eu/arrowhead/common/CommonConstants.java*.
+To be able to connect to Arrowhead, the information about the systems has to be added to the code. The properties for Service Registry, Authrization System and Orchestrator System can be found in [*arrowhead-core-common/src/main/java/eu/arrowhead/common/CommonConstants.java*](https://github.com/igo3r/MIT4.0/blob/final_prototype/core-common/src/main/java/eu/arrowhead/common/CommonConstants.java).
 
 ![Overview Arrowhead CommonConstants.java ](/images/corecommon.PNG)
 
-To avoid changing the code of Arrowhead directly, the package *eu.arrwohead.common.mit* was added to the arrowhead-core-common module, which contains the class **MITConstants.java**. This file contains the properties of C1 and C2 and has the following structure: 
+To avoid changing the code of Arrowhead directly, the package *eu.arrwohead.common.mit* was added to the arrowhead-core-common module, which contains the class [**MITConstants.java**](https://github.com/igo3r/MIT4.0/blob/final_prototype/core-common/src/main/java/eu/arrowhead/common/mit/MITConstants.java). This file contains the properties of C1 and C2 and has the following structure: 
  ```
 public interface MITConstants {
 	/* --- Common constants --- */
@@ -778,7 +793,7 @@ To be able to fulfil a task C1 requires a functionality, as C1 should simulate a
 
 ![Overview classes consumer](/images/consumerclassesUC2.PNG)
 
-In the package *eu.arrowhead.mit.consumer* the [ApplicationListener](https://github.com/igo3r/MIT4.0/blob/UseCase2/arrowhead-consumer/src/main/java/eu/arrowhead/mit/consumer/ConsumerApplicationInitListener.java), [Controller](https://github.com/igo3r/MIT4.0/blob/UseCase2/arrowhead-consumer/src/main/java/eu/arrowhead/mit/consumer/ConsumerController.java) and [Main](https://github.com/igo3r/MIT4.0/blob/UseCase2/arrowhead-consumer/src/main/java/eu/arrowhead/mit/consumer/ConsumerMain.java) are located. 
+In the package *eu.arrowhead.mit.consumer* the [ApplicationListener](https://github.com/igo3r/MIT4.0/blob/final_prototype/arrowhead-consumer/src/main/java/eu/arrowhead/mit/consumer/ConsumerApplicationInitListener.java), [Controller](https://github.com/igo3r/MIT4.0/blob/final_prototype/arrowhead-consumer/src/main/java/eu/arrowhead/mit/consumer/ConsumerController.java) and [Main](https://github.com/igo3r/MIT4.0/blob/final_prototype/arrowhead-consumer/src/main/java/eu/arrowhead/mit/consumer/ConsumerMain.java) are located. 
 
 **ConsumerMain.java** - required to start this Maven Module:
 
@@ -873,7 +888,7 @@ public class ConsumerController {
 ```
 
 
-To use Swagger the class **AuthSwaggerConfig.java** in the package *eu.arrowhead.mit.swagger* is required. Therefore the *MITConstants.MIT_SYSTEM_CONSUMER* must be used. 
+To use Swagger the class [**AuthSwaggerConfig.java**](https://github.com/igo3r/MIT4.0/blob/final_prototype/arrowhead-consumer/src/main/java/eu/arrowhead/mit/swagger/AuthSwaggerConfig.java)  in the package *eu.arrowhead.mit.swagger* is required. Therefore the *MITConstants.MIT_SYSTEM_CONSUMER* must be used. 
 
 ```
 @EnableSwagger2
@@ -891,7 +906,7 @@ public class AuthSwaggerConfig extends DefaultSwaggerConfig {
 
 ```
 
-ConsumerAirCondition.java - this class turns on and off of the air condition:
+[ConsumerAirCondition.java](https://github.com/igo3r/MIT4.0/blob/final_prototype/arrowhead-consumer/src/main/java/eu/arrowhead/mit/utils/ConsumerAirCondition.java) - - this class turns on and off of the air condition:
 
 ```
 
@@ -955,7 +970,7 @@ To be able to fulfil a task C2 requires a functionality, as C2 should simulate a
 
 ![Overview classes producer](/images/producerclassesUC2.PNG)
 
-In the package *eu.arrowhead.mit.producer* the [ApplicationListener](https://github.com/igo3r/MIT4.0/blob/UseCase2/arrowhead-producer/src/main/java/eu/arrowhead/mit/producer/ProducerApplicationInitListener.java), [Controller](https://github.com/igo3r/MIT4.0/blob/UseCase2/arrowhead-producer/src/main/java/eu/arrowhead/mit/producer/ProducerController.java) and [Main](https://github.com/igo3r/MIT4.0/blob/UseCase2/arrowhead-producer/src/main/java/eu/arrowhead/mit/producer/ProducerMain.java) are located. 
+In the package *eu.arrowhead.mit.producer* the [ApplicationListener](https://github.com/igo3r/MIT4.0/blob/final_prototype/arrowhead-producer/src/main/java/eu/arrowhead/mit/producer/ProducerApplicationInitListener.java), [Controller](https://github.com/igo3r/MIT4.0/blob/final_prototype/arrowhead-producer/src/main/java/eu/arrowhead/mit/producer/ProducerController.java) and [Main](https://github.com/igo3r/MIT4.0/blob/final_prototype/arrowhead-producer/src/main/java/eu/arrowhead/mit/producer/ProducerMain.java) are located. 
 
 **ProducerMain.java** - required to start this Maven Module:
 
@@ -1059,7 +1074,7 @@ public class ProducerController {
 ```
 
 
-To use Swagger the class **AuthSwaggerConfig.java** in the package *eu.arrowhead.mit.swagger* is required. Therefore the *MITConstants.MIT_SYSTEM_PRODUCER* must be used. 
+To use Swagger the class [**AuthSwaggerConfig.java**](https://github.com/igo3r/MIT4.0/blob/final_prototype/arrowhead-producer/src/main/java/eu/arrowhead/mit/swagger/AuthSwaggerConfig.java)  in the package *eu.arrowhead.mit.swagger* is required. Therefore the *MITConstants.MIT_SYSTEM_PRODUCER* must be used. 
 
 ```
 @EnableSwagger2
@@ -1079,7 +1094,7 @@ public class AuthSwaggerConfig extends DefaultSwaggerConfig {
 
 The package *eu.arrowhead.mit.utils* contains the class **ProducerConnection.java** and **ProducerTempGenerator.java**. The **ProducerConnection.java** is necessary to be able to connect in further steps with C1. This class is responsible for the connection to the orchestrator (Line 46 - 58) and the consumer (Line 68 - 100). Further the service which should be used, is called in this class (Line 103 - 125)
 
-The **ProducerTempGenerator.java** class reads the temperature value from an csv File, in which the PiLogger One writes the current temperature value. 
+The [**ProducerTempGenerator.java**](https://github.com/igo3r/MIT4.0/blob/final_prototype/arrowhead-producer/src/main/java/eu/arrowhead/mit/utils/ProducerTempGenerator.java) class reads the temperature value from an csv File, in which the PiLogger One writes the current temperature value. 
 
 
 NOTE: The ProducerApplicationInitListener.java and the AuthSwaggerConfig.java  were taken over and adapted from the Arrowhead Source Code. 
@@ -1092,7 +1107,7 @@ To be able to create the workload for the testruns, C0 requires some classes:
 
 ![Overview classes Client](/images/clientclasses.PNG)
 
-In the package *eu.arrowhead.mit.client* the [ApplicationListener](https://github.com/igo3r/MIT4.0/blob/UseCase2/arrowhead-client/src/main/java/eu/arrowhead/mit/client/ClientApplicationInitListener.java), [Controller](https://github.com/igo3r/MIT4.0/blob/UseCase2/arrowhead-client/src/main/java/eu/arrowhead/mit/client/ClientController.java) and [Main](https://github.com/igo3r/MIT4.0/blob/UseCase2/arrowhead-client/src/main/java/eu/arrowhead/mit/client/ClientMain.java) are located. 
+In the package *eu.arrowhead.mit.client* the [ApplicationListener](https://github.com/igo3r/MIT4.0/blob/final_prototype/arrowhead-client/src/main/java/eu/arrowhead/mit/client/ClientApplicationInitListener.java), [Controller](https://github.com/igo3r/MIT4.0/blob/final_prototype/arrowhead-client/src/main/java/eu/arrowhead/mit/client/ClientController.java) and [Main](https://github.com/igo3r/MIT4.0/blob/final_prototype/arrowhead-client/src/main/java/eu/arrowhead/mit/client/ClientMain.java) are located. 
 
 **ClientMain.java** - required to start this Maven Module:
 
@@ -1159,7 +1174,7 @@ public class ClientApplicationInitListener extends ApplicationInitListener{
 }
 ```
 
-**ClientController.java** - this class contains the logic of C0. As this class has 177 lines, just the run()-Methode is shown here. For the class [click here](https://github.com/igo3r/MIT4.0/blob/UseCase2/arrowhead-client/src/main/java/eu/arrowhead/mit/client/ClientController.java)
+**ClientController.java** - this class contains the logic of C0. As this class has 177 lines, just the run()-Methode is shown here. For the class [click here](https://github.com/igo3r/MIT4.0/blob/final_prototype/arrowhead-client/src/main/java/eu/arrowhead/mit/client/ClientController.java)
 ```
 @Override
 	public void run() {
@@ -1222,7 +1237,7 @@ public class ClientApplicationInitListener extends ApplicationInitListener{
 ```
 
 
-To use Swagger the class **AuthSwaggerConfig.java** in the package *eu.arrowhead.mit.swagger* is required. Therefore the *MITConstants.MIT_SYSTEM_PRODUCER* must be used. 
+To use Swagger the class [**AuthSwaggerConfig.java**](https://github.com/igo3r/MIT4.0/blob/final_prototype/arrowhead-client/src/main/java/eu/arrowhead/mit/swagger/AuthSwaggerConfig.java) in the package *eu.arrowhead.mit.swagger* is required. Therefore the *MITConstants.MIT_SYSTEM_PRODUCER* must be used. 
 ```
 @EnableSwagger2
 @Configuration
@@ -1238,9 +1253,9 @@ public class AuthSwaggerConfig extends DefaultSwaggerConfig {
 }
 ```
 
-The package *eu.arrowhead.mit.utils* contains the classes **ClientConnectionUC2.java** and **ClientProperties.java**. The first one is required to connect to C1 to start the testruns. For each inner loop a connection is established with this class. The second one is required to load the correct properties. 
+The package *eu.arrowhead.mit.utils* contains the classes [**ClientConnectionUC2.java**](https://github.com/igo3r/MIT4.0/blob/final_prototype/arrowhead-client/src/main/java/eu/arrowhead/mit/utils/ClientConnectionUC2.java) and [**ClientProperties.java**](https://github.com/igo3r/MIT4.0/blob/final_prototype/arrowhead-client/src/main/java/eu/arrowhead/mit/utils/ClientProperties.java).. The first one is required to connect to C1 to start the testruns. For each inner loop a connection is established with this class. The second one is required to load the correct properties. 
 
-ClientConnectionUC1.java:
+ClientConnectionUC2.java:
 ```
 @Component
 public class ClientConnectionUC2 {
@@ -1301,7 +1316,7 @@ NOTE: The ClientApplicationInitListener.java and the AuthSwaggerConfig.java  wer
 
 Previous the properties of C1 and C2 were added to the MITConstants.java Class. In this step these systems and their services are included to Arrowhead Source Code as follow: 
 
-Go to *arrowhead-core-common/src/main/java/eu/arrowhead/common/core/CoreSystemService.java* and add following lines after **ORCHESTRATION_SERVICE*** (Line 21):
+Go to[*arrowhead-core-common/src/main/java/eu/arrowhead/common/core/CoreSystemService.java*](https://github.com/igo3r/MIT4.0/blob/final_prototpye/core-common/src/main/java/eu/arrowhead/common/core/CoreSystemService.java) and add following lines after **ORCHESTRATION_SERVICE*** (Line 21):
 
 ```
 CONSUMER_TURN_ON_SERVICE(MITConstants.MIT_CONSUMER_SERVICE_TURN_ON, MITConstants.MIT_CONSUMER_URI + MITConstants.MIT_CONSUMER_SERVICE_TURN_ON_URI),
@@ -1310,7 +1325,7 @@ PRODUCER_GET_TEMPERATURE_SERVICE(MITConstants.MIT_PRODUCER_SERVICE_GET_TEMPERATU
 ```
 In contrast to the other branches, the consumer in the final prototype has two services, one to switch on the air conditioning and one to switch it off. Therefore one line needs to be entered for each service. 
 
-Go to *arrowhead-core-common/src/main/java/eu/arrowhead/common/core/CoreSystem.java* and add following lines at the beginning before SERVICE_REGISTRY:
+Go to [*arrowhead-core-common/src/main/java/eu/arrowhead/common/core/CoreSystem.java*](https://github.com/igo3r/MIT4.0/blob/final_prototype/core-common/src/main/java/eu/arrowhead/common/core/CoreSystem.java) and add following lines at the beginning before SERVICE_REGISTRY:
 
 ```
 CONSUMER(MITConstants.MIT_DEFAULT_CONSUMER_PORT, List.of(CoreSystemService.CONSUMER_TURN_ON_SERVICE, CoreSystemService.CONSUMER_TURN_OFF_SERVICE)),
