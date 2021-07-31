@@ -131,7 +131,7 @@ In this section a Class Diagram is shown, which indicates how the Controller Cla
 5. Create Empty Arrowhead Database
    1. Click on SQL to enter Queries 
    2. Go to script folder of the Github Project 
-   3. Copy content from file *create_empty_arrowhead_db.sql*
+   3. Copy content from file [*create_empty_arrowhead_db.sql*](https://github.com/igo3r/MIT4.0/blob/UseCase3/scripts/create_empty_arrowhead_db.sql)
    4. Paste the content into the SQL Query field and execute 
    5. It should look similar to the picture below
 
@@ -152,7 +152,7 @@ In this section a Class Diagram is shown, which indicates how the Controller Cla
    ![Swagger Service Registry](/images/swaggersr.png)
 
 
-8. Now it should similar to the pictures below. The Systems should be registered in Table *system_* (first picture) and the Services in Table *service_registry* (second picture). At this stage C1 and C2 are not able to communicate with each other. 
+8. Now it should similar to the pictures below. The Systems should be registered in Table *system_* (first picture) and the Services in Table *service_registry* (second picture). At this stage C1 and C2 are not able to communicate with each other.  This entrys are created after starting the systems.
 
 ![Table system_](/images/tablesystemUC3.PNG)
 
@@ -162,19 +162,25 @@ In this section a Class Diagram is shown, which indicates how the Controller Cla
 ![Table service_definition](/images/tableservicedefinition_UC3.PNG)
 
 9. After all systems are started successfully go back to script folder. 
-   1. Copy content from file *database_dependencies.sql*
+   1. Copy content from file [*database_dependencies.sql*](https://github.com/igo3r/MIT4.0/blob/UseCase3/scripts/database_dependencies.sql)
    2. Paste the content into the SQL Query field and execute
    3. Following table will be updated, like shown in the figures below: 
+      *  orechstrator_store
       *  authorization_intra_cloud
       *  authorization_intra_cloud_interface_connection
-      *  orechstrator_store
+     
+```INSERT INTO `orchestrator_store` (`id`, `consumer_system_id`, `provider_system_id`, `foreign_`, `service_id`, `service_interface_id`, `priority`, `attribute`, `created_at`, `updated_at`) VALUES (NULL, '3', '4', '0', '7', '2', '1', NULL, UTC_TIMESTAMP(), UTC_TIMESTAMP());```
+
+![Table orechstrator_store](/images/tableorchestratorstore_UC3.PNG)
+
+```INSERT INTO `authorization_intra_cloud` (`id`, `created_at`, `updated_at`, `consumer_system_id`, `provider_system_id`, `service_id`) VALUES (NULL, UTC_TIMESTAMP(), UTC_TIMESTAMP(), '3', '4', '7'); ```
 
 ![Table authorization_intra_cloud](/images/tableauthorizationintracloud_UC3.PNG)
 
+
+```INSERT INTO `authorization_intra_cloud_interface_connection` (`id`, `authorization_intra_cloud_id`, `interface_id`, `created_at`, `updated_at`) VALUES (NULL, '1', '2', UTC_TIMESTAMP(), UTC_TIMESTAMP());```
+
 ![Table authorization_intra_cloud_interface_connection](/images/tableauthorizationintracloudinterfaceconnection_UC3.PNG)
-
-
-![Table orechstrator_store](/images/tableorchestratorstore_UC3.PNG)
 
 
 10. Now it should work. To test it enter 127.0.0.1:2258 (C0) in the URL line of the browser to get to the Swagger of the **Arrowhead Client Core System**. 
@@ -261,7 +267,7 @@ Create the following folder structure for C2 (arrowhead-producer):
 
 Fill the application.properties File with content. This means to add database connection, server address and ports. 
 
-application.properties File C0: 
+[application.properties File C0](https://github.com/igo3r/MIT4.0/blob/UseCase3/arrowhead-client/src/main/resources/application.properties): 
 
 ```
 spring.datasource.url=jdbc:mysql://127.0.0.1:3306/arrowhead?serverTimezone=Europe/Vienna  
@@ -294,8 +300,7 @@ server.ssl.trust-store-password=""
 ```
 In the C0 file it is important to give information about the endpoint of the system, which starts the request. In this case C1 is requesting the temperature from C2. Therefore, C0 needs to know, to start with C1. 
 
-
-application.properties File C1: 
+[application.properties File C1](https://github.com/igo3r/MIT4.0/blob/UseCase3/arrowhead-consumer/src/main/resources/application.properties):  
 
 ```
 spring.datasource.url=jdbc:mysql://127.0.0.1:3306/arrowhead?serverTimezone=Europe/Vienna  
@@ -332,7 +337,7 @@ server.ssl.trust-store-password=""
 
 C1 requests the temperature from C2, because of this, the endpoint of C2 (ip address, port and service-url) has to be defined in the application.proeprties file of C1. Further C1 has to know the endpoint of Service Registry System and of Orechstrator System.  
 
-application.properties File C2: 
+[application.properties File C2](https://github.com/igo3r/MIT4.0/blob/UseCase3/arrowhead-producer/src/main/resources/application.properties): 
 
 ```
 spring.datasource.url=jdbc:mysql://127.0.0.1:3306/arrowhead?serverTimezone=Europe/Vienna  
@@ -368,11 +373,11 @@ C2 do not need an end, it just has to no where to find the Service Registry to r
 
 ### Add Constants for Components to Arrowhead Source Code
 
-To be able to connect to Arrowhead, the information about the systems has to be added to the code. The properties for Service Registry, Authrization System and Orchestrator System can be found in *arrowhead-core-common/src/main/java/eu/arrowhead/common/CommonConstants.java*.
+To be able to connect to Arrowhead, the information about the systems has to be added to the code. The properties for Service Registry, Authrization System and Orchestrator System can be found in [*arrowhead-core-common/src/main/java/eu/arrowhead/common/CommonConstants.java*](https://github.com/igo3r/MIT4.0/blob/UseCase3/core-common/src/main/java/eu/arrowhead/common/CommonConstants.java).
 
 ![Overview Arrowhead CommonConstants.java ](/images/corecommon.PNG)
 
-To avoid changing the code of Arrowhead directly, the package *eu.arrwohead.common.mit* was added to the arrowhead-core-common module, which contains the class **MITConstants.java**. This file contains the properties of C1 and C2 and has the following structure: 
+To avoid changing the code of Arrowhead directly, the package *eu.arrwohead.common.mit* was added to the arrowhead-core-common module, which contains the class [**MITConstants.java**](https://github.com/igo3r/MIT4.0/blob/UseCase3/core-common/src/main/java/eu/arrowhead/common/mit/MITConstants.java).. This file contains the properties of C1 and C2 and has the following structure: 
  ```
  package eu.arrowhead.common.mit;
 
@@ -556,7 +561,7 @@ public class ConsumerController {
 ```
 
 
-To use Swagger the class **AuthSwaggerConfig.java** in the package *eu.arrowhead.mit.swagger* is required. Therefore the *MITConstants.MIT_SYSTEM_CONSUMER* must be used. 
+To use Swagger the class [**AuthSwaggerConfig.java**](https://github.com/igo3r/MIT4.0/blob/UseCase3/arrowhead-consumer/src/main/java/eu/arrowhead/mit/swagger/AuthSwaggerConfig.java)  in the package *eu.arrowhead.mit.swagger* is required. Therefore the *MITConstants.MIT_SYSTEM_CONSUMER* must be used. 
 
 ```
 @EnableSwagger2
@@ -687,7 +692,7 @@ public class ProducerController {
 ```
 
 
-To use Swagger the class **AuthSwaggerConfig.java** in the package *eu.arrowhead.mit.swagger* is required. Therefore the *MITConstants.MIT_SYSTEM_PRODUCER* must be used. 
+To use Swagger the class [**AuthSwaggerConfig.java**](https://github.com/igo3r/MIT4.0/blob/UseCase3/arrowhead-producer/src/main/java/eu/arrowhead/mit/swagger/AuthSwaggerConfig.java)  in the package *eu.arrowhead.mit.swagger* is required. Therefore the *MITConstants.MIT_SYSTEM_PRODUCER* must be used. 
 
 ```
 @EnableSwagger2
@@ -705,7 +710,7 @@ public class AuthSwaggerConfig extends DefaultSwaggerConfig {
 
 ```
 
-The package *eu.arrowhead.mit.utils* contains the class **ProducerSensorControl.java**. This class simulates the measurement of the physical environment. It is defined, that half of the testruns, which will be conducted, have a value below the limit of 25 degrees, while the other half is above. This ensures, that the testruns are compareable. Therefore, two arrays (VALUES_TEMPERATURE_HIGH and VALUES_TEMPERATURE_LOW) are added to *arrowhead-core-common/src/main/java/eu/arrowhead/common/mit/MITConstants.java* (Line 74 and 76) with 500 values each. This means a maximum of 1000 inner loops can be performed. 
+The package *eu.arrowhead.mit.utils* contains the class [**ProducerSensorControl.java**](https://github.com/igo3r/MIT4.0/blob/UseCase1/arrowhead-producer/src/main/java/eu/arrowhead/mit/utils/ProducerSensorControl.java). This class simulates the measurement of the physical environment. It is defined, that half of the testruns, which will be conducted, have a value below the limit of 25 degrees, while the other half is above. This ensures, that the testruns are compareable. Therefore, two arrays (VALUES_TEMPERATURE_HIGH and VALUES_TEMPERATURE_LOW) are added to *arrowhead-core-common/src/main/java/eu/arrowhead/common/mit/MITConstants.java* (Line 74 and 76) with 500 values each. This means a maximum of 1000 inner loops can be performed. 
 
 ```
 @Component
@@ -871,7 +876,7 @@ public class ClientApplicationInitListener extends ApplicationInitListener{
 ```
 
 
-To use Swagger the class **AuthSwaggerConfig.java** in the package *eu.arrowhead.mit.swagger* is required. Therefore the *MITConstants.MIT_SYSTEM_PRODUCER* must be used. 
+To use Swagger the class [**AuthSwaggerConfig.java**](https://github.com/igo3r/MIT4.0/blob/UseCase3/arrowhead-client/src/main/java/eu/arrowhead/mit/swagger/AuthSwaggerConfig.java) in the package *eu.arrowhead.mit.swagger* is required. Therefore the *MITConstants.MIT_SYSTEM_PRODUCER* must be used. 
 ```
 @EnableSwagger2
 @Configuration
@@ -887,7 +892,7 @@ public class AuthSwaggerConfig extends DefaultSwaggerConfig {
 }
 ```
 
-The package *eu.arrowhead.mit.utils* contains the classes **ClientConnectionUC1.java** and **ClientProperties.java**. The first one is required to connect to C1 to start the testruns. For each inner loop a connection is established with this class. The second one is required to load the correct properties. 
+The package *eu.arrowhead.mit.utils* contains the classes [**ClientConnectionUC1.java**](https://github.com/igo3r/MIT4.0/blob/UseCase3/arrowhead-client/src/main/java/eu/arrowhead/mit/utils/ClientConnectionUC1.java) and [**ClientProperties.java**](https://github.com/igo3r/MIT4.0/blob/UseCase3/arrowhead-client/src/main/java/eu/arrowhead/mit/utils/ClientProperties.java).. The first one is required to connect to C1 to start the testruns. For each inner loop a connection is established with this class. The second one is required to load the correct properties. 
 
 ClientConnectionUC1.java:
 ```
@@ -949,14 +954,14 @@ NOTE: The ClientApplicationInitListener.java and the AuthSwaggerConfig.java  wer
 
 Previous the properties of C1 and C2 were added to the MITConstants.java Class. In this step these systems and their services are included to Arrowhead Source Code as follow: 
 
-Go to *arrowhead-core-common/src/main/java/eu/arrowhead/common/core/CoreSystemService.java* and add following lines after **ORCHESTRATION_SERVICE*** (Line 21):
+Go to [*arrowhead-core-common/src/main/java/eu/arrowhead/common/core/CoreSystemService.java*](https://github.com/igo3r/MIT4.0/blob/UseCase3/core-common/src/main/java/eu/arrowhead/common/core/CoreSystemService.java) and add following lines after **ORCHESTRATION_SERVICE*** (Line 21):
 
 ```
 CONSUMER_CLTC_ARRAY_SINGLE_SERVICE(MITConstants.MIT_SERVICE_CLTC_ARRAY_SINGLE, MITConstants.MIT_CONSUMER_URI + MITConstants.MIT_CONSUMER_CLTC_ARRAY_SINGLE_URI),
 PRODUCER_GET_ARRAY_SERVICE(MITConstants.MIT_PRODUCER_SERVICE_GET_ARRAY, MITConstants.MIT_PRODUCER_URI + MITConstants.MIT_PRODUCER_GET_ARRAY_URI_CONNECTION);
 ```
 
-Go to *arrowhead-core-common/src/main/java/eu/arrowhead/common/core/CoreSystem.java* and add following lines at the beginning before SERVICE_REGISTRY:
+Go to [*arrowhead-core-common/src/main/java/eu/arrowhead/common/core/CoreSystem.java*](https://github.com/igo3r/MIT4.0/blob/UseCase3/core-common/src/main/java/eu/arrowhead/common/core/CoreSystem.java) and add following lines at the beginning before SERVICE_REGISTRY:
 
 ```
 CONSUMER(MITConstants.MIT_DEFAULT_CONSUMER_PORT, List.of(CoreSystemService.CONSUMER_CLTC_ARRAY_SINGLE_SERVICE)),
