@@ -137,6 +137,8 @@ Pinpoint is an open source APM tool used to measure the performance of large dis
 | Router | x| | e.g. Ubiquiti Networks ES-8-150W EdgeSwitch | [Purchase](https://www.amazon.de/Ubiquiti-Networks-ES-8-150W-EdgeSwitch-8-150W-Schwarz/dp/B01JP7EQI0) |
 | BalenaEtcher |  | X | v1.5.121 | [Download](https://www.balena.io/etcher/) |
 | WinSCP |  | X | v5.17.9 | [Download](https://winscp.net/eng/download.php) |
+| Sem Voltcraft Power Plugs | X | | Sem 6000 | [Purchase](https://www.conrad.at/de/p/voltcraft-sem6000-energiekosten-messgeraet-bluetooth-schnittstelle-datenexport-datenloggerfunktion-trms-stromtarif-e-1558906.html) |
+| Sem Voltcraft Power Plugs Script |  | X | not specified | [Download](https://github.com/Heckie75/voltcraft-sem-6000) |
 
 It should be noted that we have built and tested the various use cases with these versions, so there may be problems when using older or newer versions. 
 
@@ -173,7 +175,7 @@ The master branch includes the three Arrowhead core systems Service Registry Sys
 
 The connection between the core systems is defined in the application.properties files. In this file the own ip address is defined, followed by the endpoints of the service registry and the reference to the required certificate. Furthermore the connection information to the database are stored in this file. 
 
-Service Registry System - application.properties file: 
+[Service Registry System - application.properties file](https://github.com/igo3r/MIT4.0/blob/main/serviceregistry/src/main/resources/application.properties): 
 
 ```
 ############################################
@@ -212,7 +214,7 @@ server.ssl.trust-store=classpath:certificates/truststore.p12
 server.ssl.trust-store-password=123456
 ```
 
-Authorisation System - application.properties file: 
+[Authorisation System - application.properties file](https://github.com/igo3r/MIT4.0/blob/main/authorization/src/main/resources/application.properties): 
 
 ```
 ############################################
@@ -252,7 +254,7 @@ server.ssl.trust-store=classpath:certificates/truststore.p12
 server.ssl.trust-store-password=123456
 ```
 
-Orchestration System - application.properties file: 
+[Orchestration System - application.properties file](https://github.com/igo3r/MIT4.0/blob/main/orchestrator/src/main/resources/application.properties): 
 
 ```
 ############################################
